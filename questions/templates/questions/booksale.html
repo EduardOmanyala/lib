@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Your Book Purchase</title>
+    <style>
+        body { font-family: Arial, sans-serif; color: #333; }
+        .container { padding: 20px; }
+        .header { font-size: 20px; font-weight: bold; margin-bottom: 15px; }
+        .message { font-size: 16px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Thank you for your purchase!</div>
+        <div class="message">
+            <p>Dear Reader,</p>
+            <p>We’re excited to let you know that your book <strong>{{ book.title }}</strong> is attached to this email as a PDF.</p>
+            <p>Enjoy your reading, and thank you for choosing us!</p>
+            <p>— The Bookstore Team</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+.orderdashsection {
+	margin-top: 1%;
+	display: grid;
+    grid-template-columns: 25% 75%;
+
+}
+
+.orderdetailsmain {
+    margin-right:2%;
+}
+
+.addinst {
+    margin-left:4%;
+    margin-right:2%;
+}
+
+.order-details1 {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+}
+
+.fsmall {
+    font-size: small"
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Questions Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+
+   {% if messages %}
+            {% for message in messages %}
+              <div class="alert alert-{{ message.tags }} mt-4">
+                {{ message }}
+              </div>
+            {% endfor %}
+            {% endif %}
+    
+  <div style="margin: 7%;">
+
+    <div class="card">
+  <div class="card-header">
+    Featured
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="{% url 'generate_fixture' %}" class="btn btn-primary">Updtate Fixture</a>
+  </div>
+</div>
+
+
+
+  </div>
+
+
+    <h1>Welcome to the Questions Home Page</h1>
+    <p>This is a basic HTML page for the Questions app.</p>
+    <br>
+     {% for book in books %}
+     <h1>{{ book.id }}</h1>
+      {% endfor %}
+    <br>
+    {% for question in questions %}
+    <div style="margin-bottom: 3%;">{{ question.text|safe }}</div>
+    {% endfor %}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+        window.MathJax = {
+          tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+          svg: { fontCache: 'global' }
+        };
+      </script>
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</body>
+</html>
