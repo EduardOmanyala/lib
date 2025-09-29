@@ -177,6 +177,8 @@ AUTO_LOGOUT = {'IDLE_TIME': 360000, 'REDIRECT_TO_LOGIN_IMMEDIATELY': True, 'MESS
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
+    "https://ken-lib.com",       
+    "https://www.ken-lib.com",
 ]
 
 CORS_ALLOW_CREDENTIALS = True
