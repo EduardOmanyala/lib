@@ -14,7 +14,7 @@ DEBUG = config('DEBUG', cast=bool)
 
 ALLOWED_HOSTS = ['api.ken-lib.com']
 # ALLOWED_HOSTS = []
-
+#questions/fixtures/kcse.json
 
 # Application definition
 

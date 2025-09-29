@@ -23,7 +23,7 @@ import json
 
 
 def home(request):
-    questions = Question.objects.all()
+    questions = Question.objects.all()[:5]
     books = Book.objects.all()
     return render(request, 'questions/home.html', {'questions': questions, 'books': books})
 
