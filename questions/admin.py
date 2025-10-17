@@ -1,7 +1,8 @@
 from django.contrib import admin
-from .models import Question, Kasneb, Course, Subject, MyCourses, MySubjects, Book
+from .models import Question, Kasneb, Course, Subject, MyCourses, MySubjects, Book, Docs
 
 admin.site.register(Book)
+admin.site.register(Docs)
 @admin.register(Question)
 class QuestionAdmin(admin.ModelAdmin):
     list_display = ['subject', 'year', 'question_num', 'type', 'paper_type']
