@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from questions.models import Question, Kasneb, Book
+from questions.models import Question, Kasneb, Book, Docs
 from rest_framework.response import Response
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import AllowAny, IsAuthenticated
@@ -550,9 +550,17 @@ def pay_success(request):
                     )
                     message.content_subtype = "html"
 
+
+                    docs = Docs.objects.filter(book=book)
+
+                    # Attach each doc file (if available)
+                    for doc in docs:
+                        if doc.file and doc.file.path:  # ensure file exists
+                            message.attach_file(doc.file.path)
+
                     # Attach book PDF if available
-                    if book.pdf:
-                        message.attach_file(book.pdf.path)
+                    # if book.pdf:
+                    #     message.attach_file(book.pdf.path)
 
                     message.send(fail_silently=False)
 

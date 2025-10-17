@@ -128,6 +128,8 @@ class MySubjects(models.Model):
 class Book(models.Model):
     title = models.CharField(max_length=500)
     author = models.CharField(max_length=200)
+    price = models.IntegerField(default=180)
+    availability = models. BooleanField(default=False)
     pdf_file = models.FileField(upload_to='books/')
     created_at = models.DateTimeField(auto_now_add=True)
     purchase_count = models.IntegerField(default=0)
@@ -147,3 +149,9 @@ def create_book_slug(sender, instance, **kwargs):
         instance.slug = slugify(instance.title)
 
 pre_save.connect(create_book_slug, sender=Book)
+
+
+class Docs(models.Model):
+    book = models.ForeignKey(Book, on_delete=models.CASCADE)
+    file = models.FileField(upload_to='books/', null=True, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
