@@ -133,6 +133,7 @@ class Book(models.Model):
     pdf_file = models.FileField(upload_to='books/')
     created_at = models.DateTimeField(auto_now_add=True)
     purchase_count = models.IntegerField(default=0)
+    info = HTMLField(null=True, blank=True)
     summary = models.TextField(blank=True, null=True)
     pdf = models.FileField(upload_to='books/', null=True, blank=True)
     slug = models.SlugField(max_length=500, unique=True, blank=True)

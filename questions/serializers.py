@@ -60,4 +60,4 @@ class CourseWithSubjectsSerializer(serializers.ModelSerializer):
 class BookSerializer(serializers.ModelSerializer):
     class Meta:
         model = Book
-        fields = ['id', 'title', 'author', 'pdf_file', 'created_at', 'purchase_count', 'slug', 'summary']
+        fields = ['id', 'title', 'author', 'pdf_file', 'created_at', 'purchase_count', 'slug', 'price', 'info', 'summary']
