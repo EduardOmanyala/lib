@@ -49,7 +49,8 @@ def questions_list(request):
 @permission_classes([AllowAny])
 def books_list(request):
     print("Books list view accessed - no authentication required")
-    books = Book.objects.all()
+    #books = Book.objects.all()
+    books = Book.objects.filter(availability=True)
     serializer = BookSerializer(books, many=True)
     return Response(serializer.data)
 
