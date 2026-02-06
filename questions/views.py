@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from questions.models import Question, Kasneb, Book, Docs
+from questions.models import Question, Kasneb, Book, Docs, Webhook
 from rest_framework.response import Response
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import AllowAny, IsAuthenticated
@@ -575,3 +575,35 @@ def pay_success(request):
             return HttpResponse(status=200)
 
     return HttpResponse(status=405)
+
+
+
+@csrf_exempt
+@require_POST
+def flutterwave_webhook(request):
+    # Step 1: Get the raw body exactly as Flutterwave sent it
+    try:
+        raw_body = request.body.decode('utf-8')  # or just keep as bytes if you prefer
+        payload = json.loads(raw_body)
+    except json.JSONDecodeError:
+        # Bad JSON → still return 200 so Flutterwave doesn't retry endlessly
+        return JsonResponse({"status": "invalid json"}, status=200)
+
+    # Step 2: Save the FULL raw payload immediately
+    webhook = Webhook.objects.create(
+        raw_payload=payload
+    )
+
+    # Step 5: Always return 200 OK quickly
+    return JsonResponse({"status": "success"}, status=200)
+
+
+
+def webhook_test(request):
+    webhooks = Webhook.objects.all()[:5]
+    payloads = [
+        json.dumps(w.raw_payload, indent=2)
+        for w in webhooks
+    ]
+   
+    return render(request, 'questions/webhooks.html', {'payloads': payloads})

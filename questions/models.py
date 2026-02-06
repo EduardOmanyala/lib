@@ -156,3 +156,9 @@ class Docs(models.Model):
     book = models.ForeignKey(Book, on_delete=models.CASCADE)
     file = models.FileField(upload_to='books/', null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
+
+
+class Webhook(models.Model):
+    raw_payload = models.JSONField()           # ← this stores the FULL original JSON
+
+
