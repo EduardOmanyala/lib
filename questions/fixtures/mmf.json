@@ -1,0 +1,290 @@
+[
+  {
+    "model": "questions.MMFProvider",
+    "pk": 1,
+    "fields": {
+      "name": "Ndovu Wealth Limited",
+      "code": "NDVU",
+      "is_active": true
+    }
+  },
+  {
+    "model": "questions.MMFProvider",
+    "pk": 2,
+    "fields": {
+      "name": "ArvoCap Asset Managers Limited",
+      "code": "ARVC",
+      "is_active": true
+    }
+  },
+  {
+    "model": "questions.MMFProvider",
+    "pk": 3,
+    "fields": {
+      "name": "Lofty-Corban Investments Limited",
+      "code": "LFCB",
+      "is_active": true
+    }
+  },
+  {
+    "model": "questions.MMFProvider",
+    "pk": 4,
+    "fields": {
+      "name": "KCB Asset Management Limited",
+      "code": "KCBM",
+      "is_active": true
+    }
+  },
+  {
+    "model": "questions.MMFProvider",
+    "pk": 5,
+    "fields": {
+      "name": "Etica Capital Limited",
+      "code": "ETCA",
+      "is_active": true
+    }
+  },
+  {
+    "model": "questions.MMFProvider",
+    "pk": 6,
+    "fields": {
+      "name": "GenAfrica Asset Managers",
+      "code": "GNFA",
+      "is_active": true
+    }
+  },
+  {
+    "model": "questions.MMFProvider",
+    "pk": 7,
+    "fields": {
+      "name": "Stanbic Unit Trust Funds",
+      "code": "STNB",
+      "is_active": true
+    }
+  },
+  {
+    "model": "questions.MMFProvider",
+    "pk": 8,
+    "fields": {
+      "name": "Nabo Capital Limited",
+      "code": "NABC",
+      "is_active": true
+    }
+  },
+  {
+    "model": "questions.MMFProvider",
+    "pk": 9,
+    "fields": {
+      "name": "Faulu Microfinance Bank Limited",
+      "code": "FAUL",
+      "is_active": true
+    }
+  },
+  {
+    "model": "questions.MMFProvider",
+    "pk": 10,
+    "fields": {
+      "name": "Kuza Asset Management Limited",
+      "code": "KZAM",
+      "is_active": true
+    }
+  },
+  {
+    "model": "questions.MMFProvider",
+    "pk": 11,
+    "fields": {
+      "name": "Cytonn Asset Managers Limited",
+      "code": "CYTN",
+      "is_active": true
+    }
+  },
+  {
+    "model": "questions.MMFProvider",
+    "pk": 12,
+    "fields": {
+      "name": "Jubilee Financial Services Limited",
+      "code": "JBLE",
+      "is_active": true
+    }
+  },
+  {
+    "model": "questions.MMFProvider",
+    "pk": 13,
+    "fields": {
+      "name": "Mali Money Market Fund (Safaricom)",
+      "code": "MALI",
+      "is_active": true
+    }
+  },
+  {
+    "model": "questions.MMFProvider",
+    "pk": 14,
+    "fields": {
+      "name": "Enwealth Financial Services",
+      "code": "ENWL",
+      "is_active": true
+    }
+  },
+  {
+    "model": "questions.MMFProvider",
+    "pk": 15,
+    "fields": {
+      "name": "Dry Associates",
+      "code": "DRYA",
+      "is_active": true
+    }
+  },
+  {
+    "model": "questions.MMFProvider",
+    "pk": 16,
+    "fields": {
+      "name": "Sanlam Investments East Africa",
+      "code": "SNLM",
+      "is_active": true
+    }
+  },
+  {
+    "model": "questions.MMFProvider",
+    "pk": 17,
+    "fields": {
+      "name": "GenCap Hela Imara (Genghis Capital)",
+      "code": "GHIM",
+      "is_active": true
+    }
+  },
+  {
+    "model": "questions.MMFProvider",
+    "pk": 18,
+    "fields": {
+      "name": "Apollo Asset Management Company",
+      "code": "APOL",
+      "is_active": true
+    }
+  },
+  {
+    "model": "questions.MMFProvider",
+    "pk": 19,
+    "fields": {
+      "name": "Absa Shilling Money Market Fund",
+      "code": "ABSH",
+      "is_active": true
+    }
+  },
+  {
+    "model": "questions.MMFProvider",
+    "pk": 20,
+    "fields": {
+      "name": "Old Mutual Unit Trust Scheme",
+      "code": "OMUT",
+      "is_active": true
+    }
+  },
+  {
+    "model": "questions.MMFProvider",
+    "pk": 21,
+    "fields": {
+      "name": "GulfCap Investment Bank",
+      "code": "GLFC",
+      "is_active": true
+    }
+  },
+  {
+    "model": "questions.MMFProvider",
+    "pk": 22,
+    "fields": {
+      "name": "Orient Kasha Money Market Fund",
+      "code": "ORTK",
+      "is_active": true
+    }
+  },
+  {
+    "model": "questions.MMFProvider",
+    "pk": 23,
+    "fields": {
+      "name": "Ziidi Collective Investment Scheme",
+      "code": "ZIDI",
+      "is_active": true
+    }
+  },
+  {
+    "model": "questions.MMFProvider",
+    "pk": 24,
+    "fields": {
+      "name": "CIC Asset Managers Limited",
+      "code": "CICM",
+      "is_active": true
+    }
+  },
+  {
+    "model": "questions.MMFProvider",
+    "pk": 25,
+    "fields": {
+      "name": "Co-op Trust Investment Services",
+      "code": "COOP",
+      "is_active": true
+    }
+  },
+  {
+    "model": "questions.MMFProvider",
+    "pk": 26,
+    "fields": {
+      "name": "ICEA Lion Asset Management",
+      "code": "IELA",
+      "is_active": true
+    }
+  },
+  {
+    "model": "questions.MMFProvider",
+    "pk": 27,
+    "fields": {
+      "name": "Britam Asset Managers (Kenya) Limited",
+      "code": "BRTM",
+      "is_active": true
+    }
+  },
+  {
+    "model": "questions.MMFProvider",
+    "pk": 28,
+    "fields": {
+      "name": "I&M Capital Limited",
+      "code": "IMCP",
+      "is_active": true
+    }
+  },
+  {
+    "model": "questions.MMFProvider",
+    "pk": 29,
+    "fields": {
+      "name": "Mayfair Asset Managers Limited",
+      "code": "MYFR",
+      "is_active": true
+    }
+  },
+  {
+    "model": "questions.MMFProvider",
+    "pk": 30,
+    "fields": {
+      "name": "African Alliance Kenya Asset Management",
+      "code": "ALAK",
+      "is_active": true
+    }
+  },
+  {
+    "model": "questions.MMFProvider",
+    "pk": 31,
+    "fields": {
+      "name": "Madison Investment Managers Limited",
+      "code": "MDSN",
+      "is_active": true
+    }
+  },
+  {
+    "model": "questions.MMFProvider",
+    "pk": 32,
+    "fields": {
+      "name": "Equity Investment Bank Money Market Fund",
+      "code": "EQIB",
+      "is_active": true
+    }
+  }
+]

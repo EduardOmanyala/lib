@@ -1,8 +1,10 @@
 from django.contrib import admin
-from .models import Question, Kasneb, Course, Subject, MyCourses, MySubjects, Book, Docs
+from .models import Question, Kasneb, Course, Subject, MyCourses, MySubjects, Book, Docs, MMFProvider, MMFMonthlyRate
 
 admin.site.register(Book)
 admin.site.register(Docs)
+admin.site.register(MMFProvider)
+admin.site.register(MMFMonthlyRate)
 @admin.register(Question)
 class QuestionAdmin(admin.ModelAdmin):
     list_display = ['subject', 'year', 'question_num', 'type', 'paper_type']

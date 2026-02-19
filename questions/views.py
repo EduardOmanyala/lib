@@ -1,12 +1,15 @@
 from django.shortcuts import render, redirect
-from questions.models import Question, Kasneb, Book, Docs, Webhook
+from questions.models import Question, Kasneb, Book, Docs, Webhook, MMFProvider, MMFMonthlyRate
 from rest_framework.response import Response
 from rest_framework.decorators import api_view, permission_classes
+from rest_framework.views import APIView
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework import generics, status
-from questions.serializers import QuestionSerializer, BookSerializer
+from questions.serializers import QuestionSerializer, BookSerializer, MMFProviderSerializer, MMFMonthlyRateSerializer
 from django.contrib import messages
 import random
+
+
 
 
 
@@ -607,3 +610,51 @@ def webhook_test(request):
     ]
    
     return render(request, 'questions/webhooks.html', {'payloads': payloads})
+
+
+def getway_test(request):
+      
+      return render(request, 'questions/fluter.html')
+
+
+class MMFProviderDetailView(APIView):
+    permission_classes = [AllowAny]
+    """
+    Returns:
+    - Provider name
+    - Last 12 monthly rates
+    - Latest rate
+    - Percentage change from previous month
+    """
+    
+    def get(self, request, code):
+        try:
+            provider = MMFProvider.objects.get(code=code, is_active=True)
+        except MMFProvider.DoesNotExist:
+            return Response(
+                {"detail": "Provider not found"},
+                status=status.HTTP_404_NOT_FOUND
+            )
+
+        # Last 12 months (latest first, then reversed for chart)
+        monthly_qs = (
+            MMFMonthlyRate.objects
+            .filter(provider=provider)
+            .order_by("-created_at")[:12]
+        )
+
+        monthly_rates = list(monthly_qs)[::-1]
+
+        latest = monthly_qs.first()
+
+        return Response({
+            "provider": MMFProviderSerializer(provider).data,
+            "monthly_rates": MMFMonthlyRateSerializer(
+                monthly_rates, many=True
+            ).data,
+            "latest_rate": latest.rate if latest else None,
+            "percentage_change": (
+                latest.percentage_change if latest else None
+            ),
+        })
+    

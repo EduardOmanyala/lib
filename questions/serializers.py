@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Question, Kasneb, Course, Subject, MyCourses, MySubjects, Book
+from .models import Question, Kasneb, Course, Subject, MyCourses, MySubjects, Book, MMFProvider, MMFMonthlyRate
 
 
 class QuestionSerializer(serializers.ModelSerializer):
@@ -61,3 +61,21 @@ class BookSerializer(serializers.ModelSerializer):
     class Meta:
         model = Book
         fields = ['id', 'title', 'author', 'pdf_file', 'created_at', 'availability', 'purchase_count', 'slug', 'price', 'info', 'summary']
+
+
+class MMFProviderSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = MMFProvider
+        fields = ["name", "code"]
+
+class MMFMonthlyRateSerializer(serializers.ModelSerializer):
+    month = serializers.CharField()
+    rate = serializers.DecimalField(max_digits=6, decimal_places=2)
+
+    class Meta:
+        model = MMFMonthlyRate
+        fields = ["month", "rate"]
+
+class MMFRateSummarySerializer(serializers.Serializer):
+    latest_rate = serializers.DecimalField(max_digits=6, decimal_places=2)
+    percentage_change = serializers.DecimalField(max_digits=6, decimal_places=2, allow_null=True)

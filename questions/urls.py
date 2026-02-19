@@ -12,6 +12,7 @@ urlpatterns = [
     path("questions/get/", questions_views.QuestionFetchView.as_view(), name="questions-fecth"),
     path("questions/random/", questions_views.random_questions, name="random-questions"),
     path("test/", questions_views.test_endpoint, name="test-endpoint"),
+     path("flutter/test/", questions_views.getway_test, name="test-endpoint2"),
 
 
     path("books/<int:id>/", questions_views.BookDetailView.as_view(), name="book-detail"),
@@ -19,6 +20,7 @@ urlpatterns = [
     path("books/pay/callback/", questions_views.pay_success, name="book-pay-success"),
     path('webhook/flutterwave/', questions_views.flutterwave_webhook, name='flutterwave-webhook'),
     path('webtest/', questions_views.webhook_test, name='flutterwave-webtest'),
+    path("mmf/providers/<str:code>/", questions_views.MMFProviderDetailView.as_view(), name="mmf-provider-detail"),
     
     # API endpoints for courses and subjects
     path('api/courses/', questions_views.course_list, name='course_list'),

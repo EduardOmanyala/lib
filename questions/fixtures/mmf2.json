@@ -1,0 +1,2469 @@
+[
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 1,
+    "fields": {
+      "provider": 1,
+      "year": 2025,
+      "month": "Aug 25",
+      "rate": "13.5000",
+      "created_at": "2026-02-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 2,
+    "fields": {
+      "provider": 1,
+      "year": 2025,
+      "month": "Sep 25",
+      "rate": "13.2000",
+      "created_at": "2026-02-01T00:00:06Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 3,
+    "fields": {
+      "provider": 1,
+      "year": 2025,
+      "month": "Oct 25",
+      "rate": "13.1000",
+      "created_at": "2026-02-01T00:00:12Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 4,
+    "fields": {
+      "provider": 1,
+      "year": 2025,
+      "month": "Nov 25",
+      "rate": "12.0000",
+      "created_at": "2026-02-01T00:00:18Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 5,
+    "fields": {
+      "provider": 1,
+      "year": 2025,
+      "month": "Dec 25",
+      "rate": "11.5000",
+      "created_at": "2026-02-01T00:00:24Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 6,
+    "fields": {
+      "provider": 1,
+      "year": 2026,
+      "month": "Jan 26",
+      "rate": "11.2000",
+      "created_at": "2026-02-01T00:00:30Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 7,
+    "fields": {
+      "provider": 1,
+      "year": 2026,
+      "month": "Feb 26",
+      "rate": "11.1000",
+      "created_at": "2026-02-01T00:00:36Z"
+    }
+  },
+
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 8,
+    "fields": {
+      "provider": 2,
+      "year": 2024,
+      "month": "Aug 24",
+      "rate": "17.2000",
+      "created_at": "2026-02-01T00:00:42Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 9,
+    "fields": {
+      "provider": 2,
+      "year": 2024,
+      "month": "Sep 24",
+      "rate": "16.8000",
+      "created_at": "2026-02-01T00:00:48Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 10,
+    "fields": {
+      "provider": 2,
+      "year": 2024,
+      "month": "Oct 24",
+      "rate": "16.7000",
+      "created_at": "2026-02-01T00:00:54Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 11,
+    "fields": {
+      "provider": 2,
+      "year": 2024,
+      "month": "Nov 24",
+      "rate": "16.5000",
+      "created_at": "2026-02-01T00:01:00Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 12,
+    "fields": {
+      "provider": 2,
+      "year": 2024,
+      "month": "Dec 24",
+      "rate": "15.3200",
+      "created_at": "2026-02-01T00:01:06Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 13,
+    "fields": {
+      "provider": 2,
+      "year": 2026,
+      "month": "Jan 26",
+      "rate": "9.6900",
+      "created_at": "2026-02-01T00:01:12Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 14,
+    "fields": {
+      "provider": 2,
+      "year": 2026,
+      "month": "Feb 26",
+      "rate": "11.6800",
+      "created_at": "2026-02-01T00:01:18Z"
+    }
+  },
+
+{
+    "model": "questions.MMFMonthlyRate",
+    "pk": 15,
+    "fields": {
+      "provider": 3,
+      "year": 2025,
+      "month": "Aug 25",
+      "rate": "11.8800",
+      "created_at": "2026-02-01T00:01:24Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 16,
+    "fields": {
+      "provider": 3,
+      "year": 2025,
+      "month": "Sep 25",
+      "rate": "11.1600",
+      "created_at": "2026-02-01T00:01:30Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 17,
+    "fields": {
+      "provider": 3,
+      "year": 2025,
+      "month": "Oct 25",
+      "rate": "11.1600",
+      "created_at": "2026-02-01T00:01:31Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 18,
+    "fields": {
+      "provider": 3,
+      "year": 2025,
+      "month": "Nov 25",
+      "rate": "10.9900",
+      "created_at": "2026-02-01T00:01:32Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 19,
+    "fields": {
+      "provider": 3,
+      "year": 2025,
+      "month": "Dec 25",
+      "rate": "8.9500",
+      "created_at": "2026-02-01T00:01:33Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 20,
+    "fields": {
+      "provider": 3,
+      "year": 2026,
+      "month": "Jan 26",
+      "rate": "8.9200",
+      "created_at": "2026-02-01T00:01:34Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 21,
+    "fields": {
+      "provider": 3,
+      "year": 2026,
+      "month": "Feb 26",
+      "rate": "9.0000",
+      "created_at": "2026-02-01T00:01:35Z"
+    }
+  },
+
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 22,
+    "fields": {
+      "provider": 4,
+      "year": 2025,
+      "month": "Aug 25",
+      "rate": "10.0000",
+      "created_at": "2026-02-01T00:01:36Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 23,
+    "fields": {
+      "provider": 4,
+      "year": 2025,
+      "month": "Sep 25",
+      "rate": "9.0000",
+      "created_at": "2026-02-01T00:01:37Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 24,
+    "fields": {
+      "provider": 4,
+      "year": 2025,
+      "month": "Oct 25",
+      "rate": "7.9000",
+      "created_at": "2026-02-01T00:01:38Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 25,
+    "fields": {
+      "provider": 4,
+      "year": 2025,
+      "month": "Nov 25",
+      "rate": "7.6300",
+      "created_at": "2026-02-01T00:01:39Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 26,
+    "fields": {
+      "provider": 4,
+      "year": 2025,
+      "month": "Dec 25",
+      "rate": "7.5200",
+      "created_at": "2026-02-01T00:01:40Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 27,
+    "fields": {
+      "provider": 4,
+      "year": 2026,
+      "month": "Jan 26",
+      "rate": "8.8000",
+      "created_at": "2026-02-01T00:01:41Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 28,
+    "fields": {
+      "provider": 4,
+      "year": 2026,
+      "month": "Feb 26",
+      "rate": "8.5000",
+      "created_at": "2026-02-01T00:01:42Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 29,
+    "fields": {
+      "provider": 5,
+      "year": 2025,
+      "month": "Aug 25",
+      "rate": "12.0000",
+      "created_at": "2026-02-01T00:01:43Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 30,
+    "fields": {
+      "provider": 5,
+      "year": 2025,
+      "month": "Sep 25",
+      "rate": "11.0000",
+      "created_at": "2026-02-01T00:01:44Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 31,
+    "fields": {
+      "provider": 5,
+      "year": 2025,
+      "month": "Oct 25",
+      "rate": "9.7000",
+      "created_at": "2026-02-01T00:01:45Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 32,
+    "fields": {
+      "provider": 5,
+      "year": 2025,
+      "month": "Nov 25",
+      "rate": "9.4800",
+      "created_at": "2026-02-01T00:01:46Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 33,
+    "fields": {
+      "provider": 5,
+      "year": 2025,
+      "month": "Dec 25",
+      "rate": "9.3400",
+      "created_at": "2026-02-01T00:01:47Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 34,
+    "fields": {
+      "provider": 5,
+      "year": 2026,
+      "month": "Jan 26",
+      "rate": "9.6000",
+      "created_at": "2026-02-01T00:01:48Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 35,
+    "fields": {
+      "provider": 5,
+      "year": 2026,
+      "month": "Feb 26",
+      "rate": "9.4000",
+      "created_at": "2026-02-01T00:01:49Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 36,
+    "fields": {
+      "provider": 6,
+      "year": 2025,
+      "month": "Aug 25",
+      "rate": "11.8000",
+      "created_at": "2026-02-01T00:01:50Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 37,
+    "fields": {
+      "provider": 6,
+      "year": 2025,
+      "month": "Sep 25",
+      "rate": "10.5000",
+      "created_at": "2026-02-01T00:01:51Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 38,
+    "fields": {
+      "provider": 6,
+      "year": 2025,
+      "month": "Oct 25",
+      "rate": "8.6000",
+      "created_at": "2026-02-01T00:01:52Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 39,
+    "fields": {
+      "provider": 6,
+      "year": 2025,
+      "month": "Nov 25",
+      "rate": "7.9900",
+      "created_at": "2026-02-01T00:01:53Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 40,
+    "fields": {
+      "provider": 6,
+      "year": 2025,
+      "month": "Dec 25",
+      "rate": "7.6300",
+      "created_at": "2026-02-01T00:01:54Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 41,
+    "fields": {
+      "provider": 6,
+      "year": 2026,
+      "month": "Jan 26",
+      "rate": "8.5000",
+      "created_at": "2026-02-01T00:01:55Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 42,
+    "fields": {
+      "provider": 6,
+      "year": 2026,
+      "month": "Feb 26",
+      "rate": "8.0000",
+      "created_at": "2026-02-01T00:01:56Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 43,
+    "fields": {
+      "provider": 7,
+      "year": 2025,
+      "month": "Aug 25",
+      "rate": "9.0000",
+      "created_at": "2026-02-01T00:01:57Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 44,
+    "fields": {
+      "provider": 7,
+      "year": 2025,
+      "month": "Sep 25",
+      "rate": "7.0000",
+      "created_at": "2026-02-01T00:01:58Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 45,
+    "fields": {
+      "provider": 7,
+      "year": 2025,
+      "month": "Oct 25",
+      "rate": "5.4000",
+      "created_at": "2026-02-01T00:01:59Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 46,
+    "fields": {
+      "provider": 7,
+      "year": 2025,
+      "month": "Nov 25",
+      "rate": "5.5000",
+      "created_at": "2026-02-01T00:02:00Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 47,
+    "fields": {
+      "provider": 7,
+      "year": 2025,
+      "month": "Dec 25",
+      "rate": "5.6000",
+      "created_at": "2026-02-01T00:02:01Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 48,
+    "fields": {
+      "provider": 7,
+      "year": 2026,
+      "month": "Jan 26",
+      "rate": "5.6000",
+      "created_at": "2026-02-01T00:02:02Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 49,
+    "fields": {
+      "provider": 7,
+      "year": 2026,
+      "month": "Feb 26",
+      "rate": "5.5000",
+      "created_at": "2026-02-01T00:02:03Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 50,
+    "fields": {
+      "provider": 8,
+      "year": 2025,
+      "month": "Aug 25",
+      "rate": "12.5000",
+      "created_at": "2026-02-01T00:02:04Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 51,
+    "fields": {
+      "provider": 8,
+      "year": 2025,
+      "month": "Sep 25",
+      "rate": "11.3000",
+      "created_at": "2026-02-01T00:02:05Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 52,
+    "fields": {
+      "provider": 8,
+      "year": 2025,
+      "month": "Oct 25",
+      "rate": "9.9000",
+      "created_at": "2026-02-01T00:02:06Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 53,
+    "fields": {
+      "provider": 8,
+      "year": 2025,
+      "month": "Nov 25",
+      "rate": "9.3600",
+      "created_at": "2026-02-01T00:02:07Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 54,
+    "fields": {
+      "provider": 8,
+      "year": 2025,
+      "month": "Dec 25",
+      "rate": "9.4500",
+      "created_at": "2026-02-01T00:02:08Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 55,
+    "fields": {
+      "provider": 8,
+      "year": 2026,
+      "month": "Jan 26",
+      "rate": "9.9000",
+      "created_at": "2026-02-01T00:02:09Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 56,
+    "fields": {
+      "provider": 8,
+      "year": 2026,
+      "month": "Feb 26",
+      "rate": "9.8000",
+      "created_at": "2026-02-01T00:02:10Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 57,
+    "fields": {
+      "provider": 9,
+      "year": 2025,
+      "month": "Aug 25",
+      "rate": "10.8000",
+      "created_at": "2026-02-01T00:02:11Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 58,
+    "fields": {
+      "provider": 9,
+      "year": 2025,
+      "month": "Sep 25",
+      "rate": "9.5000",
+      "created_at": "2026-02-01T00:02:12Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 59,
+    "fields": {
+      "provider": 9,
+      "year": 2025,
+      "month": "Oct 25",
+      "rate": "8.3000",
+      "created_at": "2026-02-01T00:02:13Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 60,
+    "fields": {
+      "provider": 9,
+      "year": 2025,
+      "month": "Nov 25",
+      "rate": "8.1800",
+      "created_at": "2026-02-01T00:02:14Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 61,
+    "fields": {
+      "provider": 9,
+      "year": 2025,
+      "month": "Dec 25",
+      "rate": "7.7400",
+      "created_at": "2026-02-01T00:02:15Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 62,
+    "fields": {
+      "provider": 9,
+      "year": 2026,
+      "month": "Jan 26",
+      "rate": "8.0000",
+      "created_at": "2026-02-01T00:02:16Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 63,
+    "fields": {
+      "provider": 9,
+      "year": 2026,
+      "month": "Feb 26",
+      "rate": "7.7000",
+      "created_at": "2026-02-01T00:02:17Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 64,
+    "fields": {
+      "provider": 10,
+      "year": 2025,
+      "month": "Aug 25",
+      "rate": "12.0000",
+      "created_at": "2026-02-01T00:02:18Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 65,
+    "fields": {
+      "provider": 10,
+      "year": 2025,
+      "month": "Sep 25",
+      "rate": "10.8000",
+      "created_at": "2026-02-01T00:02:19Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 66,
+    "fields": {
+      "provider": 10,
+      "year": 2025,
+      "month": "Oct 25",
+      "rate": "9.0000",
+      "created_at": "2026-02-01T00:02:20Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 67,
+    "fields": {
+      "provider": 10,
+      "year": 2025,
+      "month": "Nov 25",
+      "rate": "8.8500",
+      "created_at": "2026-02-01T00:02:21Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 68,
+    "fields": {
+      "provider": 10,
+      "year": 2025,
+      "month": "Dec 25",
+      "rate": "8.6400",
+      "created_at": "2026-02-01T00:02:22Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 69,
+    "fields": {
+      "provider": 10,
+      "year": 2026,
+      "month": "Jan 26",
+      "rate": "9.2000",
+      "created_at": "2026-02-01T00:02:23Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 70,
+    "fields": {
+      "provider": 10,
+      "year": 2026,
+      "month": "Feb 26",
+      "rate": "9.0000",
+      "created_at": "2026-02-01T00:02:24Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 71,
+    "fields": {
+      "provider": 11,
+      "year": 2025,
+      "month": "Aug 25",
+      "rate": "13.5000",
+      "created_at": "2026-02-01T00:02:25Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 72,
+    "fields": {
+      "provider": 11,
+      "year": 2025,
+      "month": "Sep 25",
+      "rate": "12.0000",
+      "created_at": "2026-02-01T00:02:26Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 73,
+    "fields": {
+      "provider": 11,
+      "year": 2025,
+      "month": "Oct 25",
+      "rate": "10.0800",
+      "created_at": "2026-02-01T00:02:27Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 74,
+    "fields": {
+      "provider": 11,
+      "year": 2025,
+      "month": "Nov 25",
+      "rate": "9.6800",
+      "created_at": "2026-02-01T00:02:28Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 75,
+    "fields": {
+      "provider": 11,
+      "year": 2025,
+      "month": "Dec 25",
+      "rate": "9.5700",
+      "created_at": "2026-02-01T00:02:29Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 76,
+    "fields": {
+      "provider": 11,
+      "year": 2026,
+      "month": "Jan 26",
+      "rate": "10.1000",
+      "created_at": "2026-02-01T00:02:30Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 77,
+    "fields": {
+      "provider": 11,
+      "year": 2026,
+      "month": "Feb 26",
+      "rate": "10.0000",
+      "created_at": "2026-02-01T00:02:31Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 78,
+    "fields": {
+      "provider": 12,
+      "year": 2025,
+      "month": "Aug 25",
+      "rate": "11.8000",
+      "created_at": "2026-02-01T00:02:32Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 79,
+    "fields": {
+      "provider": 12,
+      "year": 2025,
+      "month": "Sep 25",
+      "rate": "10.2000",
+      "created_at": "2026-02-01T00:02:33Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 80,
+    "fields": {
+      "provider": 12,
+      "year": 2025,
+      "month": "Oct 25",
+      "rate": "9.0000",
+      "created_at": "2026-02-01T00:02:34Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 81,
+    "fields": {
+      "provider": 12,
+      "year": 2025,
+      "month": "Nov 25",
+      "rate": "8.4800",
+      "created_at": "2026-02-01T00:02:35Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 82,
+    "fields": {
+      "provider": 12,
+      "year": 2025,
+      "month": "Dec 25",
+      "rate": "8.7000",
+      "created_at": "2026-02-01T00:02:36Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 83,
+    "fields": {
+      "provider": 12,
+      "year": 2026,
+      "month": "Jan 26",
+      "rate": "10.3000",
+      "created_at": "2026-02-01T00:02:37Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 84,
+    "fields": {
+      "provider": 12,
+      "year": 2026,
+      "month": "Feb 26",
+      "rate": "8.7000",
+      "created_at": "2026-02-01T00:02:38Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 85,
+    "fields": {
+      "provider": 13,
+      "year": 2025,
+      "month": "Aug 25",
+      "rate": "10.0000",
+      "created_at": "2026-02-01T00:02:39Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 86,
+    "fields": {
+      "provider": 13,
+      "year": 2025,
+      "month": "Sep 25",
+      "rate": "8.5000",
+      "created_at": "2026-02-01T00:02:40Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 87,
+    "fields": {
+      "provider": 13,
+      "year": 2025,
+      "month": "Oct 25",
+      "rate": "6.3000",
+      "created_at": "2026-02-01T00:02:41Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 88,
+    "fields": {
+      "provider": 13,
+      "year": 2025,
+      "month": "Nov 25",
+      "rate": "6.9600",
+      "created_at": "2026-02-01T00:02:42Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 89,
+    "fields": {
+      "provider": 13,
+      "year": 2025,
+      "month": "Dec 25",
+      "rate": "6.5000",
+      "created_at": "2026-02-01T00:02:43Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 90,
+    "fields": {
+      "provider": 13,
+      "year": 2026,
+      "month": "Jan 26",
+      "rate": "7.5000",
+      "created_at": "2026-02-01T00:02:44Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 91,
+    "fields": {
+      "provider": 13,
+      "year": 2026,
+      "month": "Feb 26",
+      "rate": "7.0000",
+      "created_at": "2026-02-01T00:02:45Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 92,
+    "fields": {
+      "provider": 14,
+      "year": 2025,
+      "month": "Aug 25",
+      "rate": "10.6800",
+      "created_at": "2026-02-01T00:02:46Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 93,
+    "fields": {
+      "provider": 14,
+      "year": 2025,
+      "month": "Sep 25",
+      "rate": "9.0200",
+      "created_at": "2026-02-01T00:02:47Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 94,
+    "fields": {
+      "provider": 14,
+      "year": 2025,
+      "month": "Oct 25",
+      "rate": "8.9700",
+      "created_at": "2026-02-01T00:02:48Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 95,
+    "fields": {
+      "provider": 14,
+      "year": 2025,
+      "month": "Nov 25",
+      "rate": "8.9900",
+      "created_at": "2026-02-01T00:02:49Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 96,
+    "fields": {
+      "provider": 14,
+      "year": 2025,
+      "month": "Dec 25",
+      "rate": "8.9600",
+      "created_at": "2026-02-01T00:02:50Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 97,
+    "fields": {
+      "provider": 14,
+      "year": 2026,
+      "month": "Jan 26",
+      "rate": "9.2000",
+      "created_at": "2026-02-01T00:02:51Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 98,
+    "fields": {
+      "provider": 14,
+      "year": 2026,
+      "month": "Feb 26",
+      "rate": "9.0000",
+      "created_at": "2026-02-01T00:02:52Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 99,
+    "fields": {
+      "provider": 15,
+      "year": 2025,
+      "month": "Aug 25",
+      "rate": "9.7000",
+      "created_at": "2026-02-01T00:02:53Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 100,
+    "fields": {
+      "provider": 15,
+      "year": 2025,
+      "month": "Sep 25",
+      "rate": "8.1200",
+      "created_at": "2026-02-01T00:02:54Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 101,
+    "fields": {
+      "provider": 15,
+      "year": 2025,
+      "month": "Oct 25",
+      "rate": "8.0500",
+      "created_at": "2026-02-01T00:02:55Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 102,
+    "fields": {
+      "provider": 15,
+      "year": 2025,
+      "month": "Nov 25",
+      "rate": "6.5000",
+      "created_at": "2026-02-01T00:02:56Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 103,
+    "fields": {
+      "provider": 15,
+      "year": 2025,
+      "month": "Dec 25",
+      "rate": "7.7100",
+      "created_at": "2026-02-01T00:02:57Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 104,
+    "fields": {
+      "provider": 15,
+      "year": 2026,
+      "month": "Jan 26",
+      "rate": "7.8000",
+      "created_at": "2026-02-01T00:02:58Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 105,
+    "fields": {
+      "provider": 15,
+      "year": 2026,
+      "month": "Feb 26",
+      "rate": "7.6000",
+      "created_at": "2026-02-01T00:02:59Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 106,
+    "fields": {
+      "provider": 16,
+      "year": 2025,
+      "month": "Aug 25",
+      "rate": "9.6700",
+      "created_at": "2026-02-01T00:03:00Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 107,
+    "fields": {
+      "provider": 16,
+      "year": 2025,
+      "month": "Sep 25",
+      "rate": "7.7100",
+      "created_at": "2026-02-01T00:03:01Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 108,
+    "fields": {
+      "provider": 16,
+      "year": 2025,
+      "month": "Oct 25",
+      "rate": "7.6300",
+      "created_at": "2026-02-01T00:03:02Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 109,
+    "fields": {
+      "provider": 16,
+      "year": 2025,
+      "month": "Nov 25",
+      "rate": "6.5400",
+      "created_at": "2026-02-01T00:03:03Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 110,
+    "fields": {
+      "provider": 16,
+      "year": 2025,
+      "month": "Dec 25",
+      "rate": "7.6900",
+      "created_at": "2026-02-01T00:03:04Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 111,
+    "fields": {
+      "provider": 16,
+      "year": 2026,
+      "month": "Jan 26",
+      "rate": "7.8000",
+      "created_at": "2026-02-01T00:03:05Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 112,
+    "fields": {
+      "provider": 16,
+      "year": 2026,
+      "month": "Feb 26",
+      "rate": "7.6000",
+      "created_at": "2026-02-01T00:03:06Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 113,
+    "fields": {
+      "provider": 17,
+      "year": 2025,
+      "month": "Aug 25",
+      "rate": "10.0000",
+      "created_at": "2026-02-01T00:03:07Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 114,
+    "fields": {
+      "provider": 17,
+      "year": 2025,
+      "month": "Sep 25",
+      "rate": "7.2100",
+      "created_at": "2026-02-01T00:03:08Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 115,
+    "fields": {
+      "provider": 17,
+      "year": 2025,
+      "month": "Oct 25",
+      "rate": "6.8900",
+      "created_at": "2026-02-01T00:03:09Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 116,
+    "fields": {
+      "provider": 17,
+      "year": 2025,
+      "month": "Nov 25",
+      "rate": "5.5000",
+      "created_at": "2026-02-01T00:03:10Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 117,
+    "fields": {
+      "provider": 17,
+      "year": 2025,
+      "month": "Dec 25",
+      "rate": "7.1100",
+      "created_at": "2026-02-01T00:03:11Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 118,
+    "fields": {
+      "provider": 17,
+      "year": 2026,
+      "month": "Jan 26",
+      "rate": "7.2000",
+      "created_at": "2026-02-01T00:03:12Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 119,
+    "fields": {
+      "provider": 17,
+      "year": 2026,
+      "month": "Feb 26",
+      "rate": "7.0000",
+      "created_at": "2026-02-01T00:03:13Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 120,
+    "fields": {
+      "provider": 18,
+      "year": 2025,
+      "month": "Aug 25",
+      "rate": "10.5400",
+      "created_at": "2026-02-01T00:03:14Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 121,
+    "fields": {
+      "provider": 18,
+      "year": 2025,
+      "month": "Sep 25",
+      "rate": "8.2300",
+      "created_at": "2026-02-01T00:03:15Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 122,
+    "fields": {
+      "provider": 18,
+      "year": 2025,
+      "month": "Oct 25",
+      "rate": "8.1100",
+      "created_at": "2026-02-01T00:03:16Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 123,
+    "fields": {
+      "provider": 18,
+      "year": 2025,
+      "month": "Nov 25",
+      "rate": "6.8000",
+      "created_at": "2026-02-01T00:03:17Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 124,
+    "fields": {
+      "provider": 18,
+      "year": 2025,
+      "month": "Dec 25",
+      "rate": "7.7100",
+      "created_at": "2026-02-01T00:03:18Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 125,
+    "fields": {
+      "provider": 18,
+      "year": 2026,
+      "month": "Jan 26",
+      "rate": "7.9000",
+      "created_at": "2026-02-01T00:03:19Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 126,
+    "fields": {
+      "provider": 18,
+      "year": 2026,
+      "month": "Feb 26",
+      "rate": "7.7000",
+      "created_at": "2026-02-01T00:03:20Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 127,
+    "fields": {
+      "provider": 19,
+      "year": 2025,
+      "month": "Aug 25",
+      "rate": "10.6000",
+      "created_at": "2026-02-01T00:03:21Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 128,
+    "fields": {
+      "provider": 19,
+      "year": 2025,
+      "month": "Sep 25",
+      "rate": "7.2200",
+      "created_at": "2026-02-01T00:03:22Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 129,
+    "fields": {
+      "provider": 19,
+      "year": 2025,
+      "month": "Oct 25",
+      "rate": "6.5700",
+      "created_at": "2026-02-01T00:03:23Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 130,
+    "fields": {
+      "provider": 19,
+      "year": 2025,
+      "month": "Nov 25",
+      "rate": "6.1200",
+      "created_at": "2026-02-01T00:03:24Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 131,
+    "fields": {
+      "provider": 19,
+      "year": 2025,
+      "month": "Dec 25",
+      "rate": "6.2500",
+      "created_at": "2026-02-01T00:03:25Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 132,
+    "fields": {
+      "provider": 19,
+      "year": 2026,
+      "month": "Jan 26",
+      "rate": "7.0000",
+      "created_at": "2026-02-01T00:03:26Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 133,
+    "fields": {
+      "provider": 19,
+      "year": 2026,
+      "month": "Feb 26",
+      "rate": "6.8000",
+      "created_at": "2026-02-01T00:03:27Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 134,
+    "fields": {
+      "provider": 20,
+      "year": 2025,
+      "month": "Aug 25",
+      "rate": "10.4500",
+      "created_at": "2026-02-01T00:03:28Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 135,
+    "fields": {
+      "provider": 20,
+      "year": 2025,
+      "month": "Sep 25",
+      "rate": "8.7400",
+      "created_at": "2026-02-01T00:03:29Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 136,
+    "fields": {
+      "provider": 20,
+      "year": 2025,
+      "month": "Oct 25",
+      "rate": "8.6500",
+      "created_at": "2026-02-01T00:03:30Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 137,
+    "fields": {
+      "provider": 20,
+      "year": 2025,
+      "month": "Nov 25",
+      "rate": "8.6900",
+      "created_at": "2026-02-01T00:03:31Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 138,
+    "fields": {
+      "provider": 20,
+      "year": 2025,
+      "month": "Dec 25",
+      "rate": "8.5500",
+      "created_at": "2026-02-01T00:03:32Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 139,
+    "fields": {
+      "provider": 20,
+      "year": 2026,
+      "month": "Jan 26",
+      "rate": "8.7000",
+      "created_at": "2026-02-01T00:03:33Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 140,
+    "fields": {
+      "provider": 20,
+      "year": 2026,
+      "month": "Feb 26",
+      "rate": "8.5000",
+      "created_at": "2026-02-01T00:03:34Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 141,
+    "fields": {
+      "provider": 21,
+      "year": 2025,
+      "month": "Aug 25",
+      "rate": "11.7900",
+      "created_at": "2026-02-01T00:03:35Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 142,
+    "fields": {
+      "provider": 21,
+      "year": 2025,
+      "month": "Sep 25",
+      "rate": "9.7600",
+      "created_at": "2026-02-01T00:03:36Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 143,
+    "fields": {
+      "provider": 21,
+      "year": 2025,
+      "month": "Oct 25",
+      "rate": "9.6600",
+      "created_at": "2026-02-01T00:03:37Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 144,
+    "fields": {
+      "provider": 21,
+      "year": 2025,
+      "month": "Nov 25",
+      "rate": "8.8500",
+      "created_at": "2026-02-01T00:03:38Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 145,
+    "fields": {
+      "provider": 21,
+      "year": 2025,
+      "month": "Dec 25",
+      "rate": "8.7500",
+      "created_at": "2026-02-01T00:03:39Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 146,
+    "fields": {
+      "provider": 21,
+      "year": 2026,
+      "month": "Jan 26",
+      "rate": "8.9000",
+      "created_at": "2026-02-01T00:03:40Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 147,
+    "fields": {
+      "provider": 21,
+      "year": 2026,
+      "month": "Feb 26",
+      "rate": "8.7000",
+      "created_at": "2026-02-01T00:03:41Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 148,
+    "fields": {
+      "provider": 22,
+      "year": 2025,
+      "month": "Aug 25",
+      "rate": "11.1000",
+      "created_at": "2026-02-01T00:03:42Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 149,
+    "fields": {
+      "provider": 22,
+      "year": 2025,
+      "month": "Sep 25",
+      "rate": "9.4100",
+      "created_at": "2026-02-01T00:03:43Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 150,
+    "fields": {
+      "provider": 22,
+      "year": 2025,
+      "month": "Oct 25",
+      "rate": "8.7700",
+      "created_at": "2026-02-01T00:03:44Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 151,
+    "fields": {
+      "provider": 22,
+      "year": 2025,
+      "month": "Nov 25",
+      "rate": "8.7900",
+      "created_at": "2026-02-01T00:03:45Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 152,
+    "fields": {
+      "provider": 22,
+      "year": 2025,
+      "month": "Dec 25",
+      "rate": "8.2100",
+      "created_at": "2026-02-01T00:03:46Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 153,
+    "fields": {
+      "provider": 22,
+      "year": 2026,
+      "month": "Jan 26",
+      "rate": "8.7000",
+      "created_at": "2026-02-01T00:03:47Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 154,
+    "fields": {
+      "provider": 22,
+      "year": 2026,
+      "month": "Feb 26",
+      "rate": "8.5000",
+      "created_at": "2026-02-01T00:03:48Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 155,
+    "fields": {
+      "provider": 23,
+      "year": 2025,
+      "month": "Aug 25",
+      "rate": "7.4000",
+      "created_at": "2026-02-01T00:03:49Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 156,
+    "fields": {
+      "provider": 23,
+      "year": 2025,
+      "month": "Sep 25",
+      "rate": "6.1600",
+      "created_at": "2026-02-01T00:03:50Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 157,
+    "fields": {
+      "provider": 23,
+      "year": 2025,
+      "month": "Oct 25",
+      "rate": "6.0000",
+      "created_at": "2026-02-01T00:03:51Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 158,
+    "fields": {
+      "provider": 23,
+      "year": 2025,
+      "month": "Nov 25",
+      "rate": "6.1600",
+      "created_at": "2026-02-01T00:03:52Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 159,
+    "fields": {
+      "provider": 23,
+      "year": 2025,
+      "month": "Dec 25",
+      "rate": "5.4100",
+      "created_at": "2026-02-01T00:03:53Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 160,
+    "fields": {
+      "provider": 23,
+      "year": 2026,
+      "month": "Jan 26",
+      "rate": "5.2000",
+      "created_at": "2026-02-01T00:03:54Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 161,
+    "fields": {
+      "provider": 23,
+      "year": 2026,
+      "month": "Feb 26",
+      "rate": "5.0000",
+      "created_at": "2026-02-01T00:03:55Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 162,
+    "fields": {
+      "provider": 24,
+      "year": 2025,
+      "month": "Aug 25",
+      "rate": "8.9400",
+      "created_at": "2026-02-01T00:03:56Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 163,
+    "fields": {
+      "provider": 24,
+      "year": 2025,
+      "month": "Sep 25",
+      "rate": "6.9900",
+      "created_at": "2026-02-01T00:03:57Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 164,
+    "fields": {
+      "provider": 24,
+      "year": 2025,
+      "month": "Oct 25",
+      "rate": "6.9900",
+      "created_at": "2026-02-01T00:03:58Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 165,
+    "fields": {
+      "provider": 24,
+      "year": 2025,
+      "month": "Nov 25",
+      "rate": "5.8000",
+      "created_at": "2026-02-01T00:03:59Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 166,
+    "fields": {
+      "provider": 24,
+      "year": 2025,
+      "month": "Dec 25",
+      "rate": "6.9900",
+      "created_at": "2026-02-01T00:04:00Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 167,
+    "fields": {
+      "provider": 24,
+      "year": 2026,
+      "month": "Jan 26",
+      "rate": "8.0000",
+      "created_at": "2026-02-01T00:04:01Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 168,
+    "fields": {
+      "provider": 24,
+      "year": 2026,
+      "month": "Feb 26",
+      "rate": "7.8000",
+      "created_at": "2026-02-01T00:04:02Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 169,
+    "fields": {
+      "provider": 25,
+      "year": 2025,
+      "month": "Aug 25",
+      "rate": "8.8600",
+      "created_at": "2026-02-01T00:04:03Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 170,
+    "fields": {
+      "provider": 25,
+      "year": 2025,
+      "month": "Sep 25",
+      "rate": "7.4200",
+      "created_at": "2026-02-01T00:04:04Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 171,
+    "fields": {
+      "provider": 25,
+      "year": 2025,
+      "month": "Oct 25",
+      "rate": "7.1200",
+      "created_at": "2026-02-01T00:04:05Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 172,
+    "fields": {
+      "provider": 25,
+      "year": 2025,
+      "month": "Nov 25",
+      "rate": "8.8600",
+      "created_at": "2026-02-01T00:04:06Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 173,
+    "fields": {
+      "provider": 25,
+      "year": 2025,
+      "month": "Dec 25",
+      "rate": "6.6600",
+      "created_at": "2026-02-01T00:04:07Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 174,
+    "fields": {
+      "provider": 25,
+      "year": 2026,
+      "month": "Jan 26",
+      "rate": "7.4000",
+      "created_at": "2026-02-01T00:04:08Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 175,
+    "fields": {
+      "provider": 25,
+      "year": 2026,
+      "month": "Feb 26",
+      "rate": "7.2000",
+      "created_at": "2026-02-01T00:04:09Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 176,
+    "fields": {
+      "provider": 26,
+      "year": 2025,
+      "month": "Aug 25",
+      "rate": "8.7500",
+      "created_at": "2026-02-01T00:04:10Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 177,
+    "fields": {
+      "provider": 26,
+      "year": 2025,
+      "month": "Sep 25",
+      "rate": "7.4300",
+      "created_at": "2026-02-01T00:04:11Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 178,
+    "fields": {
+      "provider": 26,
+      "year": 2025,
+      "month": "Oct 25",
+      "rate": "7.1000",
+      "created_at": "2026-02-01T00:04:12Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 179,
+    "fields": {
+      "provider": 26,
+      "year": 2025,
+      "month": "Nov 25",
+      "rate": "5.7000",
+      "created_at": "2026-02-01T00:04:13Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 180,
+    "fields": {
+      "provider": 26,
+      "year": 2025,
+      "month": "Dec 25",
+      "rate": "6.9600",
+      "created_at": "2026-02-01T00:04:14Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 181,
+    "fields": {
+      "provider": 26,
+      "year": 2026,
+      "month": "Jan 26",
+      "rate": "7.4000",
+      "created_at": "2026-02-01T00:04:15Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 182,
+    "fields": {
+      "provider": 26,
+      "year": 2026,
+      "month": "Feb 26",
+      "rate": "7.2000",
+      "created_at": "2026-02-01T00:04:16Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 183,
+    "fields": {
+      "provider": 27,
+      "year": 2025,
+      "month": "Aug 25",
+      "rate": "10.6100",
+      "created_at": "2026-02-01T00:04:17Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 184,
+    "fields": {
+      "provider": 27,
+      "year": 2025,
+      "month": "Sep 25",
+      "rate": "8.6800",
+      "created_at": "2026-02-01T00:04:18Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 185,
+    "fields": {
+      "provider": 27,
+      "year": 2025,
+      "month": "Oct 25",
+      "rate": "8.6700",
+      "created_at": "2026-02-01T00:04:19Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 186,
+    "fields": {
+      "provider": 27,
+      "year": 2025,
+      "month": "Nov 25",
+      "rate": "8.5000",
+      "created_at": "2026-02-01T00:04:20Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 187,
+    "fields": {
+      "provider": 27,
+      "year": 2025,
+      "month": "Dec 25",
+      "rate": "8.2200",
+      "created_at": "2026-02-01T00:04:21Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 188,
+    "fields": {
+      "provider": 27,
+      "year": 2026,
+      "month": "Jan 26",
+      "rate": "8.4000",
+      "created_at": "2026-02-01T00:04:22Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 189,
+    "fields": {
+      "provider": 27,
+      "year": 2026,
+      "month": "Feb 26",
+      "rate": "8.2000",
+      "created_at": "2026-02-01T00:04:23Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 190,
+    "fields": {
+      "provider": 28,
+      "year": 2025,
+      "month": "Aug 25",
+      "rate": "10.0900",
+      "created_at": "2026-02-01T00:04:24Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 191,
+    "fields": {
+      "provider": 28,
+      "year": 2025,
+      "month": "Sep 25",
+      "rate": "9.6800",
+      "created_at": "2026-02-01T00:04:25Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 192,
+    "fields": {
+      "provider": 28,
+      "year": 2025,
+      "month": "Oct 25",
+      "rate": "8.0000",
+      "created_at": "2026-02-01T00:04:26Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 193,
+    "fields": {
+      "provider": 28,
+      "year": 2025,
+      "month": "Nov 25",
+      "rate": "8.7000",
+      "created_at": "2026-02-01T00:04:27Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 194,
+    "fields": {
+      "provider": 28,
+      "year": 2025,
+      "month": "Dec 25",
+      "rate": "9.0000",
+      "created_at": "2026-02-01T00:04:28Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 195,
+    "fields": {
+      "provider": 28,
+      "year": 2026,
+      "month": "Jan 26",
+      "rate": "8.1000",
+      "created_at": "2026-02-01T00:04:29Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 196,
+    "fields": {
+      "provider": 28,
+      "year": 2026,
+      "month": "Feb 26",
+      "rate": "7.9000",
+      "created_at": "2026-02-01T00:04:30Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 197,
+    "fields": {
+      "provider": 29,
+      "year": 2025,
+      "month": "Aug 25",
+      "rate": "7.9700",
+      "created_at": "2026-02-01T00:04:31Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 198,
+    "fields": {
+      "provider": 29,
+      "year": 2025,
+      "month": "Sep 25",
+      "rate": "6.9000",
+      "created_at": "2026-02-01T00:04:32Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 199,
+    "fields": {
+      "provider": 29,
+      "year": 2025,
+      "month": "Oct 25",
+      "rate": "6.8700",
+      "created_at": "2026-02-01T00:04:33Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 200,
+    "fields": {
+      "provider": 29,
+      "year": 2025,
+      "month": "Nov 25",
+      "rate": "6.9000",
+      "created_at": "2026-02-01T00:04:34Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 201,
+    "fields": {
+      "provider": 29,
+      "year": 2025,
+      "month": "Dec 25",
+      "rate": "5.8500",
+      "created_at": "2026-02-01T00:04:35Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 202,
+    "fields": {
+      "provider": 29,
+      "year": 2026,
+      "month": "Jan 26",
+      "rate": "6.7000",
+      "created_at": "2026-02-01T00:04:36Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 203,
+    "fields": {
+      "provider": 29,
+      "year": 2026,
+      "month": "Feb 26",
+      "rate": "6.5000",
+      "created_at": "2026-02-01T00:04:37Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 204,
+    "fields": {
+      "provider": 30,
+      "year": 2025,
+      "month": "Aug 25",
+      "rate": "6.4800",
+      "created_at": "2026-02-01T00:04:38Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 205,
+    "fields": {
+      "provider": 30,
+      "year": 2025,
+      "month": "Sep 25",
+      "rate": "6.1600",
+      "created_at": "2026-02-01T00:04:39Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 206,
+    "fields": {
+      "provider": 30,
+      "year": 2025,
+      "month": "Oct 25",
+      "rate": "6.0000",
+      "created_at": "2026-02-01T00:04:40Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 207,
+    "fields": {
+      "provider": 30,
+      "year": 2025,
+      "month": "Nov 25",
+      "rate": "6.1600",
+      "created_at": "2026-02-01T00:04:41Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 208,
+    "fields": {
+      "provider": 30,
+      "year": 2025,
+      "month": "Dec 25",
+      "rate": "5.4100",
+      "created_at": "2026-02-01T00:04:42Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 209,
+    "fields": {
+      "provider": 30,
+      "year": 2026,
+      "month": "Jan 26",
+      "rate": "5.7000",
+      "created_at": "2026-02-01T00:04:43Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 210,
+    "fields": {
+      "provider": 30,
+      "year": 2026,
+      "month": "Feb 26",
+      "rate": "5.5000",
+      "created_at": "2026-02-01T00:04:44Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 211,
+    "fields": {
+      "provider": 31,
+      "year": 2025,
+      "month": "Aug 25",
+      "rate": "10.5700",
+      "created_at": "2026-02-01T00:04:45Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 212,
+    "fields": {
+      "provider": 31,
+      "year": 2025,
+      "month": "Sep 25",
+      "rate": "8.7400",
+      "created_at": "2026-02-01T00:04:46Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 213,
+    "fields": {
+      "provider": 31,
+      "year": 2025,
+      "month": "Oct 25",
+      "rate": "8.3500",
+      "created_at": "2026-02-01T00:04:47Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 214,
+    "fields": {
+      "provider": 31,
+      "year": 2025,
+      "month": "Nov 25",
+      "rate": "7.8000",
+      "created_at": "2026-02-01T00:04:48Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 215,
+    "fields": {
+      "provider": 31,
+      "year": 2025,
+      "month": "Dec 25",
+      "rate": "8.1200",
+      "created_at": "2026-02-01T00:04:49Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 216,
+    "fields": {
+      "provider": 31,
+      "year": 2026,
+      "month": "Jan 26",
+      "rate": "8.3000",
+      "created_at": "2026-02-01T00:04:50Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 217,
+    "fields": {
+      "provider": 31,
+      "year": 2026,
+      "month": "Feb 26",
+      "rate": "8.1000",
+      "created_at": "2026-02-01T00:04:51Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 218,
+    "fields": {
+      "provider": 32,
+      "year": 2025,
+      "month": "Aug 25",
+      "rate": "4.6600",
+      "created_at": "2026-02-01T00:04:52Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 219,
+    "fields": {
+      "provider": 32,
+      "year": 2025,
+      "month": "Sep 25",
+      "rate": "4.1800",
+      "created_at": "2026-02-01T00:04:53Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 220,
+    "fields": {
+      "provider": 32,
+      "year": 2025,
+      "month": "Oct 25",
+      "rate": "4.1900",
+      "created_at": "2026-02-01T00:04:54Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 221,
+    "fields": {
+      "provider": 32,
+      "year": 2025,
+      "month": "Nov 25",
+      "rate": "4.1800",
+      "created_at": "2026-02-01T00:04:55Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 222,
+    "fields": {
+      "provider": 32,
+      "year": 2025,
+      "month": "Dec 25",
+      "rate": "4.1300",
+      "created_at": "2026-02-01T00:04:56Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 223,
+    "fields": {
+      "provider": 32,
+      "year": 2026,
+      "month": "Jan 26",
+      "rate": "4.2000",
+      "created_at": "2026-02-01T00:04:57Z"
+    }
+  },
+  {
+    "model": "questions.MMFMonthlyRate",
+    "pk": 224,
+    "fields": {
+      "provider": 32,
+      "year": 2026,
+      "month": "Feb 26",
+      "rate": "4.0000",
+      "created_at": "2026-02-01T00:04:58Z"
+    }
+  }
+]

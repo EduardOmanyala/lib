@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils.text import slugify
 from django.db.models.signals import pre_save
+from django.db.models import F
 from tinymce.models import HTMLField
 from custom_user.models import User
 
@@ -160,5 +161,59 @@ class Docs(models.Model):
 
 class Webhook(models.Model):
     raw_payload = models.JSONField()           # ← this stores the FULL original JSON
+
+
+
+
+class MMFProvider(models.Model):
+    name = models.CharField(max_length=255, unique=True)
+    code = models.CharField(max_length=50, unique=True)  # e.g. CIC, NCBA
+    is_active = models.BooleanField(default=True)
+
+    def __str__(self):
+        return self.name
+
+class MMFMonthlyRate(models.Model):
+    provider = models.ForeignKey(MMFProvider, on_delete=models.CASCADE, related_name="monthly_rates")
+    year = models.PositiveIntegerField()
+    month = models.CharField(max_length=10)  # "Jan 25"
+    rate = models.DecimalField(max_digits=6, decimal_places=4, help_text="Average monthly yield (%)")
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        unique_together = ("provider", "year", "month")
+        ordering = ["-created_at"]
+        indexes = [
+            models.Index(fields=["provider", "created_at"]),
+        ]
+
+    @property
+    def percentage_change(self):
+        """
+        Compares this month’s rate with the previous month for the same provider.
+        """
+        previous = (
+            MMFMonthlyRate.objects
+            .filter(
+                provider=self.provider,
+                created_at__lt=self.created_at
+            )
+            .order_by("-created_at")
+            .first()
+        )
+
+        if not previous:
+            return None
+
+        if previous.rate == 0:
+            return None
+
+        return round(
+            ((self.rate - previous.rate) / previous.rate) * 100,
+            2
+        )
+
+    def __str__(self):
+        return f"{self.month}"
 
 
