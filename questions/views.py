@@ -499,9 +499,15 @@ def payView(request, id):
 
 
 from django.core.mail import EmailMessage, send_mail
+# def mailtest1(request):
+#     send_mail('Using SparkPost with Django123', 'This is a message from Django using SparkPost!123', 'Kenlib@ken-lib.com',
+#     ['bestessays001@gmail.com'], fail_silently=False)
+#     return redirect('home')
+
+from .tasks import send_test_email
+
 def mailtest1(request):
-    send_mail('Using SparkPost with Django123', 'This is a message from Django using SparkPost!123', 'Northstar@the-northstar.com',
-    ['bestessays001@gmail.com'], fail_silently=False)
+    send_test_email.delay()   # ← runs asynchronously via Celery
     return redirect('home')
 
 
