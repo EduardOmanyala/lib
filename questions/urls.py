@@ -16,9 +16,8 @@ urlpatterns = [
 
 
     path("books/<int:id>/", questions_views.BookDetailView.as_view(), name="book-detail"),
-    path("books/pay/<int:id>/", questions_views.payView, name="book-pay"),
-    path("books/pay/callback/", questions_views.pay_success, name="book-pay-success"),
-    path('webhook/flutterwave/', questions_views.flutterwave_webhook, name='flutterwave-webhook'),
+    path("webhook/flutterwave/", questions_views.pay_success, name="book-pay-success"),
+    # path('webhook/flutterwave/', questions_views.flutterwave_webhook, name='flutterwave-webhook'),
     path('webtest/', questions_views.webhook_test, name='flutterwave-webtest'),
     path("mmf/providers/<str:code>/", questions_views.MMFProviderDetailView.as_view(), name="mmf-provider-detail"),
     

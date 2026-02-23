@@ -8,11 +8,7 @@ from rest_framework import generics, status
 from questions.serializers import QuestionSerializer, BookSerializer, MMFProviderSerializer, MMFMonthlyRateSerializer
 from django.contrib import messages
 import random
-
-
-
-
-
+from .tasks import send_test_email, send_book_email
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_POST
 from django.http import JsonResponse, HttpResponseBadRequest
@@ -452,59 +448,13 @@ def check_onboarding_status(request):
     })
 
 
-
-@csrf_exempt  # Flutterwave won't send CSRF tokens
-@require_POST
-def payView(request, id):
-    try:
-        data = json.loads(request.body.decode("utf-8"))
-    except json.JSONDecodeError:
-        return JsonResponse({"message": "Invalid JSON"}, status=200)  # still 200
-
-    # Get payment status and email from metadata
-    status = data.get("status")
-    metadata = data.get("meta") or data.get("metadata", {})
-    user_email = metadata.get("email")
-
-    # Always return 200 so Flutterwave knows we received it
-    if status != "successful" or not user_email:
-        return JsonResponse({"message": "Payment not successful or email missing"}, status=200)
-
-    # Get the Book instance by id
-    book = get_object_or_404(Book, id=id)
-
-    # Prepare email
-    subject = f"Your Purchase: {book.title}"
-    html_message = render_to_string("questions/booksale.html", {"book": book})
-    email = EmailMessage(
-        subject=subject,
-        body=html_message,
-        from_email="noreply@yourdomain.com",
-        to=[user_email],
-    )
-    email.content_subtype = "html"
-
-    # Attach PDF file
-    if book.pdf_file:
-        email.attach_file(book.pdf_file.path)
-
-    # Try sending email (but still return 200 no matter what)
-    try:
-        email.send()
-    except Exception as e:
-        # log error here if you want
-        return JsonResponse({"message": f"Error sending email: {str(e)}"}, status=200)
-
-    return JsonResponse({"message": "Email sent successfully"}, status=200)
-
-
 from django.core.mail import EmailMessage, send_mail
 # def mailtest1(request):
 #     send_mail('Using SparkPost with Django123', 'This is a message from Django using SparkPost!123', 'Kenlib@ken-lib.com',
 #     ['bestessays001@gmail.com'], fail_silently=False)
 #     return redirect('home')
 
-from .tasks import send_test_email
+
 
 def mailtest1(request):
     send_test_email.delay()   # ← runs asynchronously via Celery
@@ -513,79 +463,131 @@ def mailtest1(request):
 
 
 
+# @csrf_exempt
+# def pay_success(request):
+#     """
+#     Webhook to handle Flutterwave payment success.
+#     """
+#     if request.method == "POST":
+#         try:
+#             payload = json.loads(request.body)
+
+#             # Always return 200 to Flutterwave
+#             response = HttpResponse(status=200)
+
+#             # ✅ Only continue if payment is successful
+#             if payload.get("status") != "successful":
+#                 return response
+
+#             # Extract tx_ref → format book-<id>-<uuid>
+#             tx_ref = payload.get("tx_ref", "")
+#             book_id = None
+#             if tx_ref.startswith("book-"):
+#                 parts = tx_ref.split("-")
+#                 if len(parts) >= 2:
+#                     book_id = parts[1]
+
+#             # Extract email from meta or customer
+#             email = None
+#             meta = payload.get("meta", {})
+#             if isinstance(meta, dict):
+#                 email = meta.get("email") or payload.get("customer", {}).get("email")
+
+#             # If we have both book_id and email, continue
+#             if book_id and email:
+#                 try:
+#                     book = Book.objects.get(id=book_id)
+
+#                     # Prepare email
+#                     subject = f"Your Book: {book.title}"
+#                     html_message = render_to_string("questions/booksale.html", {"book": book})
+
+#                     message = EmailMessage(
+#                         subject=subject,
+#                         body=html_message,
+#                         from_email="Northstar@the-northstar.com",
+#                         to=[email],
+#                     )
+#                     message.content_subtype = "html"
+
+
+#                     docs = Docs.objects.filter(book=book)
+
+#                     # Attach each doc file (if available)
+#                     for doc in docs:
+#                         if doc.file and doc.file.path:  # ensure file exists
+#                             message.attach_file(doc.file.path)
+
+#                     # Attach book PDF if available
+#                     # if book.pdf:
+#                     #     message.attach_file(book.pdf.path)
+
+#                     message.send(fail_silently=False)
+
+#                 except Book.DoesNotExist:
+#                     pass  # Optionally log error
+
+#             return response
+
+#         except Exception as e:
+#             # Log the error in production
+#             return HttpResponse(status=200)
+
+#     return HttpResponse(status=405)
+
 @csrf_exempt
 def pay_success(request):
     """
-    Webhook to handle Flutterwave payment success.
+    Flutterwave webhook handler.
+    Does NOT send email — passes data to Celery.
     """
-    if request.method == "POST":
-        try:
-            payload = json.loads(request.body)
+    if request.method != "POST":
+        return HttpResponse(status=405)
 
-            # Always return 200 to Flutterwave
-            response = HttpResponse(status=200)
+    try:
+        payload = json.loads(request.body)
 
-            # ✅ Only continue if payment is successful
-            if payload.get("status") != "successful":
-                return response
+        # Always return 200 to Flutterwave quickly
+        response = HttpResponse(status=200)
 
-            # Extract tx_ref → format book-<id>-<uuid>
-            tx_ref = payload.get("tx_ref", "")
-            book_id = None
-            if tx_ref.startswith("book-"):
-                parts = tx_ref.split("-")
-                if len(parts) >= 2:
-                    book_id = parts[1]
+        data = payload.get("data", {})
+        event = payload.get("event")
 
-            # Extract email from meta or customer
-            email = None
-            meta = payload.get("meta", {})
-            if isinstance(meta, dict):
-                email = meta.get("email") or payload.get("customer", {}).get("email")
-
-            # If we have both book_id and email, continue
-            if book_id and email:
-                try:
-                    book = Book.objects.get(id=book_id)
-
-                    # Prepare email
-                    subject = f"Your Book: {book.title}"
-                    html_message = render_to_string("questions/booksale.html", {"book": book})
-
-                    message = EmailMessage(
-                        subject=subject,
-                        body=html_message,
-                        from_email="Northstar@the-northstar.com",
-                        to=[email],
-                    )
-                    message.content_subtype = "html"
-
-
-                    docs = Docs.objects.filter(book=book)
-
-                    # Attach each doc file (if available)
-                    for doc in docs:
-                        if doc.file and doc.file.path:  # ensure file exists
-                            message.attach_file(doc.file.path)
-
-                    # Attach book PDF if available
-                    # if book.pdf:
-                    #     message.attach_file(book.pdf.path)
-
-                    message.send(fail_silently=False)
-
-                except Book.DoesNotExist:
-                    pass  # Optionally log error
-
+        # ✅ Only process completed charges
+        if event != "charge.completed":
             return response
 
-        except Exception as e:
-            # Log the error in production
-            return HttpResponse(status=200)
+        # ✅ Only successful payments
+        if data.get("status") != "successful":
+            return response
 
-    return HttpResponse(status=405)
+        # -----------------------------
+        # Extract book ID from tx_ref
+        # -----------------------------
+        tx_ref = data.get("tx_ref", "")
+        book_id = None
 
+        if tx_ref.startswith("book-"):
+            parts = tx_ref.split("-")
+            if len(parts) >= 2:
+                book_id = parts[1]
 
+        # -----------------------------
+        # Extract email from customer
+        # -----------------------------
+        email = data.get("customer", {}).get("email")
+
+        # -----------------------------
+        # Send to Celery (ONLY if valid)
+        # -----------------------------
+        if book_id and email:
+            send_book_email.delay(book_id, email)
+
+        return response
+
+    except Exception:
+        # Never return non-200 to Flutterwave
+        return HttpResponse(status=200)
 
 @csrf_exempt
 @require_POST
