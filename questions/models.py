@@ -5,6 +5,7 @@ from django.db.models import F
 from tinymce.models import HTMLField
 from custom_user.models import User
 
+
 # Create your models here.
 
 class Question(models.Model):
@@ -37,6 +38,12 @@ class Kasneb(models.Model):
     month = models.CharField(max_length=100)
     text = HTMLField()
     ans = HTMLField(blank=True, null=True)
+
+
+    
+ 
+
+
 
 
 # Course and Subject Models

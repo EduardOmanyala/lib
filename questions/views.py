@@ -16,6 +16,13 @@ from django.core.mail import EmailMessage
 from django.template.loader import render_to_string
 from django.shortcuts import get_object_or_404
 import json
+# views.py
+import os
+
+import re
+from bs4 import BeautifulSoup
+from django.http import HttpResponse
+from django.conf import settings
 
 # Create your views here.
 
@@ -113,134 +120,6 @@ from .serializers import (
 )
 
 
-
-def generate_fixture(request):
-    # html_file = os.path.join(settings.BASE_DIR, "data.html")
-    html_file = os.path.join(settings.BASE_DIR, "questions", "fixtures", "unserailized", "2018", "physicsp2.html")
-    output_path = os.path.join(settings.BASE_DIR, "questions", "fixtures","fixture.json")
-
-    # Parse HTML
-    with open(html_file, "r", encoding="utf-8") as f:
-        soup = BeautifulSoup(f, "html.parser")
-    divs = soup.find_all("div", id="qdiv")
-
-    # Default pk start
-    start_pk = 1
-
-    # If fixture file exists, load it and find the last pk
-    if os.path.exists(output_path):
-        with open(output_path, "r", encoding="utf-8") as f:
-            existing_data = json.load(f)
-            if existing_data:
-                last_pk = max(item["pk"] for item in existing_data)
-                start_pk = last_pk + 1
-    else:
-        existing_data = []
-
-    # Build new fixtures
-    new_fixtures = []
-    for i, div in enumerate(divs, start=start_pk):
-        new_fixtures.append({
-            "model": "questions.Question",
-            "pk": i,
-            "fields": {
-                "year": 2018,
-                "subject": "Physics",
-                "type": "kcse",
-                "paper_type": 2,
-                "question_num": 1,
-                "text": div.decode_contents().strip()
-            }
-        })
-
-    # Append to existing fixtures
-    fixtures = existing_data + new_fixtures
-
-    # Save JSON back
-    with open(output_path, "w", encoding="utf-8") as f:
-        json.dump(fixtures, f, indent=2, ensure_ascii=False)
-    messages.success(request, f"✅ Added {len(new_fixtures)} items starting at pk={start_pk}")
-    return redirect('home')
-    #return HttpResponse(f"✅ Added {len(new_fixtures)} items starting at pk={start_pk}")
-
-
-
-def generate_fixture2(request):
-    # Input folder (contains html files, possibly with subfolders)
-    input_folder = os.path.join(settings.BASE_DIR, "questions", "fixtures", "unserailized", "2023")
-    output_path = os.path.join(settings.BASE_DIR, "questions", "fixtures", "kcse.json")
-
-    # Default pk start
-    start_pk = 1
-
-    # If fixture file exists, load it and find the last pk
-    if os.path.exists(output_path):
-        with open(output_path, "r", encoding="utf-8") as f:
-            existing_data = json.load(f)
-            if existing_data:
-                last_pk = max(item["pk"] for item in existing_data)
-                start_pk = last_pk + 1
-    else:
-        existing_data = []
-
-    fixtures = existing_data[:]
-    pk_counter = start_pk
-
-    # Walk over all HTML files in folder (including subfolders)
-    for root, _, files in os.walk(input_folder):
-        for filename in files:
-            if filename.endswith(".html"):
-                html_file = os.path.join(root, filename)
-
-                with open(html_file, "r", encoding="utf-8") as f:
-                    soup = BeautifulSoup(f, "html.parser")
-
-                # Extract metadata from <script>
-                script_tag = soup.find("script")
-                subject = None
-                year = None
-                paper_type = None
-
-                if script_tag and script_tag.string:
-                    # crude parsing, assuming lines like: subject = "Physics"
-                    for line in script_tag.string.splitlines():
-                        line = line.strip().replace("“", '"').replace("”", '"')
-                        if line.startswith("subject"):
-                            subject = line.split("=")[1].strip().strip('"')
-                        elif line.startswith("year"):
-                            year = int(line.split("=")[1].strip().strip('"'))
-                        elif line.startswith("paper_type"):
-                            paper_type = int(line.split("=")[1].strip())
-
-                # Fallback if script missing
-                if not (subject and year and paper_type):
-                    messages.warning(request, f"⚠️ Skipped {filename} (missing metadata)")
-                    continue
-
-                # Extract all questions
-                divs = soup.find_all("div", id="qdiv")
-
-                for div in divs:
-                    fixtures.append({
-                        "model": "questions.Question",
-                        "pk": pk_counter,
-                        "fields": {
-                            "year": year,
-                            "subject": subject,
-                            "type": "kcse",
-                            "paper_type": paper_type,
-                            "question_num": 1,  # you may want to auto-increment this?
-                            "text": div.decode_contents().strip()
-                        }
-                    })
-                    pk_counter += 1
-
-    # Save JSON back
-    with open(output_path, "w", encoding="utf-8") as f:
-        json.dump(fixtures, f, indent=2, ensure_ascii=False)
-
-    messages.success(request, f"✅ Added {pk_counter - start_pk} questions across multiple files (starting at pk={start_pk})")
-    return redirect('home')
 
 
 @api_view(['GET'])
@@ -666,3 +545,156 @@ class MMFProviderDetailView(APIView):
             ),
         })
     
+
+
+
+
+# def generate_fixtures(request):
+#     """
+#     Django view to parse all HTML files in fixtures\data\ and generate
+#     a single JSON fixture file at fixtures\cpa.json
+#     """
+
+#     # data_folder = os.path.join(settings.BASE_DIR, 'fixtures', 'data')
+#     # output_file = os.path.join(settings.BASE_DIR, 'fixtures', 'cpa.json')
+#     data_folder = os.path.join(settings.BASE_DIR, 'questions', 'fixtures', 'collections')
+#     output_file = os.path.join(settings.BASE_DIR, 'questions', 'fixtures', 'cpa.json')
+#     model_name = "questions.Cpa"
+
+#     fixtures = []
+#     pk_counter = 1  # primary key counter
+
+#     # Loop through all HTML files in the data folder
+#     for filename in os.listdir(data_folder):
+#         if filename.endswith('.html'):
+#             html_file_path = os.path.join(data_folder, filename)
+#             with open(html_file_path, 'r', encoding='utf-8') as f:
+#                 html_content = f.read()
+
+#             soup = BeautifulSoup(html_content, 'html.parser')
+
+#             # --- EXTRACT CONSTANTS FROM SCRIPT ---
+#             script_tag = soup.find('script')
+#             script_text = script_tag.string if script_tag else ""
+#             year_match = re.search(r'year\s*=\s*"(\d+)"', script_text)
+#             subject_match = re.search(r'subject\s*=\s*"([^"]+)"', script_text)
+#             course_match = re.search(r'course\s*=\s*"([^"]+)"', script_text)
+#             month_match = re.search(r'month\s*=\s*"([^"]+)"', script_text)
+
+#             year = int(year_match.group(1)) if year_match else 0
+#             subject = subject_match.group(1) if subject_match else ""
+#             course = course_match.group(1) if course_match else ""
+#             month = month_match.group(1) if month_match else ""
+
+#             # --- FIND ALL Q&A PAIRS ---
+#             q_divs = soup.find_all('div', id='qdiv')
+#             a_divs = soup.find_all('div', id='ansdiv')
+
+#             if len(q_divs) != len(a_divs):
+#                 print(f"Warning in {filename}: Number of questions and answers do not match!")
+
+#             for qdiv, ansdiv in zip(q_divs, a_divs):
+#                 fixture = {
+#                     "model": model_name,
+#                     "pk": pk_counter,
+#                     "fields": {
+#                         "year": year,
+#                         "subject": subject,
+#                         "course": course,
+#                         "month": month,
+#                         "question": str(qdiv),
+#                         "answer": str(ansdiv)
+#                     }
+#                 }
+#                 fixtures.append(fixture)
+#                 pk_counter += 1
+
+#     # --- WRITE TO JSON FILE ---
+#     with open(output_file, 'w', encoding='utf-8') as f:
+#         json.dump(fixtures, f, ensure_ascii=False, indent=2)
+
+#     return HttpResponse(f"Fixture generated with {len(fixtures)} questions at {output_file}")
+    
+
+def generate_fixtures(request):
+
+    data_folder = os.path.join(settings.BASE_DIR, 'questions', 'fixtures', 'collections')
+    output_file = os.path.join(settings.BASE_DIR, 'questions', 'fixtures', 'cpa.json')
+    model_name = "cpa.CpaQuestions"
+
+    fixtures = []
+    pk_counter = 1
+
+    for filename in os.listdir(data_folder):
+        if filename.endswith('.html'):
+            html_file_path = os.path.join(data_folder, filename)
+
+            with open(html_file_path, 'r', encoding='utf-8') as f:
+                html_content = f.read()
+
+            soup = BeautifulSoup(html_content, 'html.parser')
+
+            # --- EXTRACT CONSTANTS FROM SCRIPT ---
+            script_tag = soup.find('script')
+            script_text = script_tag.get_text() if script_tag else ""
+
+            year_match = re.search(r'year\s*=\s*"(\d+)"', script_text)
+            course_match = re.search(r'course\s*=\s*"([^"]+)"', script_text)
+            month_match = re.search(r'month\s*=\s*"([^"]+)"', script_text)
+
+            # ✅ SUBJECT: must be integer (FK)
+            subject_int_match = re.search(r'subject\s*=\s*(\d+)', script_text)
+            subject_str_match = re.search(r'subject\s*=\s*"([^"]+)"', script_text)
+
+            if subject_str_match:
+                raise ValueError(f"ERROR in {filename}: subject should be INTEGER FK, found string '{subject_str_match.group(1)}'")
+
+            if not subject_int_match:
+                raise ValueError(f"ERROR in {filename}: subject not found or invalid format")
+
+            subject = int(subject_int_match.group(1))
+
+            # ✅ PAPER (already correct)
+            paper_match = re.search(r'paper\s*=\s*(\d+)', script_text)
+            if not paper_match:
+                raise ValueError(f"ERROR in {filename}: paper not found")
+
+            paper = int(paper_match.group(1))
+
+            # --- other fields ---
+            year = int(year_match.group(1)) if year_match else 0
+            course = course_match.group(1) if course_match else ""
+            month = month_match.group(1) if month_match else ""
+
+            # ✅ NEW: assign paper
+            paper = int(paper_match.group(1)) if paper_match else None
+
+            # --- FIND ALL Q&A PAIRS ---
+            q_divs = soup.find_all('div', id='qdiv')
+            a_divs = soup.find_all('div', id='ansdiv')
+
+            if len(q_divs) != len(a_divs):
+                print(f"Warning in {filename}: Number of questions and answers do not match!")
+
+            for qdiv, ansdiv in zip(q_divs, a_divs):
+                fixture = {
+                    "model": model_name,
+                    "pk": pk_counter,
+                    "fields": {
+                        "year": year,
+                        "subject": subject,
+                        "course": course,
+                        "month": month,
+                        "paper": paper,  # ✅ NEW FIELD
+                        "question": str(qdiv),
+                        "answer": str(ansdiv)
+                    }
+                }
+                fixtures.append(fixture)
+                pk_counter += 1
+
+    # --- WRITE TO JSON FILE ---
+    with open(output_file, 'w', encoding='utf-8') as f:
+        json.dump(fixtures, f, ensure_ascii=False, indent=2)
+
+    return HttpResponse(f"Fixture generated with {len(fixtures)} questions at {output_file}")

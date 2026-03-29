@@ -1,0 +1,162 @@
+[
+  {
+    "model": "cpa.cpasubject",
+    "pk": 1,
+    "fields": {
+      "title": "Financial Accounting",
+      "slug": "financial-accounting"
+    }
+  },
+  {
+    "model": "cpa.cpasubject",
+    "pk": 2,
+    "fields": {
+      "title": "Communication Skills",
+      "slug": "communication-skills"
+    }
+  },
+  {
+    "model": "cpa.cpasubject",
+    "pk": 3,
+    "fields": {
+      "title": "Economics",
+      "slug": "economics"
+    }
+  },
+  {
+    "model": "cpa.cpasubject",
+    "pk": 4,
+    "fields": {
+      "title": "ICT",
+      "slug": "ict"
+    }
+  },
+  {
+    "model": "cpa.cpasubject",
+    "pk": 5,
+    "fields": {
+      "title": "Introduction to Law",
+      "slug": "introduction-to-law"
+    }
+  },
+  {
+    "model": "cpa.cpasubject",
+    "pk": 6,
+    "fields": {
+      "title": "Quantitative Analysis",
+      "slug": "quantitative-analysis"
+    }
+  },
+  {
+    "model": "cpa.cpasubject",
+    "pk": 7,
+    "fields": {
+      "title": "Auditing",
+      "slug": "auditing"
+    }
+  },
+  {
+    "model": "cpa.cpasubject",
+    "pk": 8,
+    "fields": {
+      "title": "Company Law",
+      "slug": "company-law"
+    }
+  },
+  {
+    "model": "cpa.cpasubject",
+    "pk": 9,
+    "fields": {
+      "title": "Financial Management",
+      "slug": "financial-management"
+    }
+  },
+  {
+    "model": "cpa.cpasubject",
+    "pk": 10,
+    "fields": {
+      "title": "Financial Reporting",
+      "slug": "financial-reporting"
+    }
+  },
+  {
+    "model": "cpa.cpasubject",
+    "pk": 11,
+    "fields": {
+      "title": "Management Accounting",
+      "slug": "management-accounting"
+    }
+  },
+  {
+    "model": "cpa.cpasubject",
+    "pk": 12,
+    "fields": {
+      "title": "Taxation",
+      "slug": "taxation"
+    }
+  },
+  {
+    "model": "cpa.cpasubject",
+    "pk": 13,
+    "fields": {
+      "title": "Advanced Management Accounting",
+      "slug": "advanced-management-accounting"
+    }
+  },
+  {
+    "model": "cpa.cpasubject",
+    "pk": 14,
+    "fields": {
+      "title": "Advanced Financial Management",
+      "slug": "advanced-financial-management"
+    }
+  },
+  {
+    "model": "cpa.cpasubject",
+    "pk": 15,
+    "fields": {
+      "title": "Public Management",
+      "slug": "public-management"
+    }
+  },
+  {
+    "model": "cpa.cpasubject",
+    "pk": 16,
+    "fields": {
+      "title": "Data Analytics",
+      "slug": "data-analytics"
+    }
+  },
+  {
+    "model": "cpa.cpasubject",
+    "pk": 17,
+    "fields": {
+      "title": "Advanced Auditing",
+      "slug": "advanced-auditing"
+    }
+  },
+  {
+    "model": "cpa.cpasubject",
+    "pk": 18,
+    "fields": {
+      "title": "Advanced Financial Reporting",
+      "slug": "advanced-financial-reporting"
+    }
+  },
+  {
+    "model": "cpa.cpasubject",
+    "pk": 19,
+    "fields": {
+      "title": "Leadership and Management",
+      "slug": "leadership-and-management"
+    }
+  },
+  {
+    "model": "cpa.cpasubject",
+    "pk": 20,
+    "fields": {
+      "title": "Advanced Taxation",
+      "slug": "advanced-taxation"
+    }
+  }
+]

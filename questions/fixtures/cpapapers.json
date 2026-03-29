@@ -1,0 +1,2982 @@
+[
+    {
+        "model": "cpa.cpapaper",
+        "pk": 1,
+        "fields": {
+            "year": 2022,
+            "subject": 2,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 2,
+        "fields": {
+            "year": 2023,
+            "subject": 2,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 3,
+        "fields": {
+            "year": 2024,
+            "subject": 2,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 4,
+        "fields": {
+            "year": 2025,
+            "subject": 2,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 5,
+        "fields": {
+            "year": 2022,
+            "subject": 2,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 6,
+        "fields": {
+            "year": 2023,
+            "subject": 2,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 7,
+        "fields": {
+            "year": 2024,
+            "subject": 2,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 8,
+        "fields": {
+            "year": 2025,
+            "subject": 2,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 9,
+        "fields": {
+            "year": 2021,
+            "subject": 2,
+            "course": "cpa",
+            "month": "November"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 10,
+        "fields": {
+            "year": 2021,
+            "subject": 2,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 11,
+        "fields": {
+            "year": 2022,
+            "subject": 2,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 12,
+        "fields": {
+            "year": 2023,
+            "subject": 2,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 13,
+        "fields": {
+            "year": 2024,
+            "subject": 2,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 14,
+        "fields": {
+            "year": 2022,
+            "subject": 10,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 15,
+        "fields": {
+            "year": 2023,
+            "subject": 10,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 16,
+        "fields": {
+            "year": 2024,
+            "subject": 10,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 17,
+        "fields": {
+            "year": 2025,
+            "subject": 10,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 18,
+        "fields": {
+            "year": 2022,
+            "subject": 10,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 19,
+        "fields": {
+            "year": 2023,
+            "subject": 10,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 20,
+        "fields": {
+            "year": 2024,
+            "subject": 10,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 21,
+        "fields": {
+            "year": 2025,
+            "subject": 10,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 22,
+        "fields": {
+            "year": 2021,
+            "subject": 10,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 23,
+        "fields": {
+            "year": 2021,
+            "subject": 10,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 24,
+        "fields": {
+            "year": 2022,
+            "subject": 10,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 25,
+        "fields": {
+            "year": 2023,
+            "subject": 10,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 26,
+        "fields": {
+            "year": 2024,
+            "subject": 10,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 27,
+        "fields": {
+            "year": 2021,
+            "subject": 10,
+            "course": "cpa",
+            "month": "May"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 28,
+        "fields": {
+            "year": 2020,
+            "subject": 10,
+            "course": "cpa",
+            "month": "November"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 29,
+        "fields": {
+            "year": 2021,
+            "subject": 10,
+            "course": "cpa",
+            "month": "September"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 30,
+        "fields": {
+            "year": 2022,
+            "subject": 11,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 31,
+        "fields": {
+            "year": 2023,
+            "subject": 11,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 32,
+        "fields": {
+            "year": 2024,
+            "subject": 11,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 33,
+        "fields": {
+            "year": 2025,
+            "subject": 11,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 34,
+        "fields": {
+            "year": 2022,
+            "subject": 11,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 35,
+        "fields": {
+            "year": 2023,
+            "subject": 11,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 36,
+        "fields": {
+            "year": 2024,
+            "subject": 11,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 37,
+        "fields": {
+            "year": 2025,
+            "subject": 11,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 38,
+        "fields": {
+            "year": 2021,
+            "subject": 11,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 39,
+        "fields": {
+            "year": 2021,
+            "subject": 11,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 40,
+        "fields": {
+            "year": 2022,
+            "subject": 11,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 41,
+        "fields": {
+            "year": 2023,
+            "subject": 11,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 42,
+        "fields": {
+            "year": 2024,
+            "subject": 11,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 43,
+        "fields": {
+            "year": 2021,
+            "subject": 11,
+            "course": "cpa",
+            "month": "May"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 44,
+        "fields": {
+            "year": 2020,
+            "subject": 11,
+            "course": "cpa",
+            "month": "November"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 45,
+        "fields": {
+            "year": 2021,
+            "subject": 11,
+            "course": "cpa",
+            "month": "Septemmber"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 46,
+        "fields": {
+            "year": 2022,
+            "subject": 12,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 47,
+        "fields": {
+            "year": 2023,
+            "subject": 12,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 48,
+        "fields": {
+            "year": 2024,
+            "subject": 12,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 49,
+        "fields": {
+            "year": 2025,
+            "subject": 12,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 50,
+        "fields": {
+            "year": 2022,
+            "subject": 12,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 51,
+        "fields": {
+            "year": 2023,
+            "subject": 12,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 52,
+        "fields": {
+            "year": 2024,
+            "subject": 12,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 53,
+        "fields": {
+            "year": 2025,
+            "subject": 12,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 54,
+        "fields": {
+            "year": 2021,
+            "subject": 12,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 55,
+        "fields": {
+            "year": 2021,
+            "subject": 12,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 56,
+        "fields": {
+            "year": 2022,
+            "subject": 12,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 57,
+        "fields": {
+            "year": 2023,
+            "subject": 12,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 58,
+        "fields": {
+            "year": 2024,
+            "subject": 12,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 59,
+        "fields": {
+            "year": 2021,
+            "subject": 12,
+            "course": "cpa",
+            "month": "May"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 60,
+        "fields": {
+            "year": 2020,
+            "subject": 12,
+            "course": "cpa",
+            "month": "November"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 61,
+        "fields": {
+            "year": 2021,
+            "subject": 12,
+            "course": "cpa",
+            "month": "September"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 62,
+        "fields": {
+            "year": 2023,
+            "subject": 13,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 63,
+        "fields": {
+            "year": 2024,
+            "subject": 13,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 64,
+        "fields": {
+            "year": 2025,
+            "subject": 13,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 65,
+        "fields": {
+            "year": 2022,
+            "subject": 13,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 66,
+        "fields": {
+            "year": 2023,
+            "subject": 13,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 67,
+        "fields": {
+            "year": 2024,
+            "subject": 13,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 68,
+        "fields": {
+            "year": 2025,
+            "subject": 13,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 69,
+        "fields": {
+            "year": 2021,
+            "subject": 13,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 70,
+        "fields": {
+            "year": 2021,
+            "subject": 13,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 71,
+        "fields": {
+            "year": 2022,
+            "subject": 13,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 72,
+        "fields": {
+            "year": 2023,
+            "subject": 13,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 73,
+        "fields": {
+            "year": 2024,
+            "subject": 13,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 74,
+        "fields": {
+            "year": 2025,
+            "subject": 13,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 75,
+        "fields": {
+            "year": 2021,
+            "subject": 13,
+            "course": "cpa",
+            "month": "May"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 76,
+        "fields": {
+            "year": 2020,
+            "subject": 13,
+            "course": "cpa",
+            "month": "November"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 77,
+        "fields": {
+            "year": 2021,
+            "subject": 13,
+            "course": "cpa",
+            "month": "September"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 78,
+        "fields": {
+            "year": 2025,
+            "subject": 14,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 79,
+        "fields": {
+            "year": 2025,
+            "subject": 14,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 80,
+        "fields": {
+            "year": 2022,
+            "subject": 14,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 81,
+        "fields": {
+            "year": 2023,
+            "subject": 14,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 82,
+        "fields": {
+            "year": 2024,
+            "subject": 14,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 83,
+        "fields": {
+            "year": 2025,
+            "subject": 14,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 84,
+        "fields": {
+            "year": 2022,
+            "subject": 14,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 85,
+        "fields": {
+            "year": 2023,
+            "subject": 14,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 86,
+        "fields": {
+            "year": 2024,
+            "subject": 14,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 87,
+        "fields": {
+            "year": 2021,
+            "subject": 14,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 88,
+        "fields": {
+            "year": 2021,
+            "subject": 14,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 89,
+        "fields": {
+            "year": 2022,
+            "subject": 14,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 90,
+        "fields": {
+            "year": 2023,
+            "subject": 14,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 91,
+        "fields": {
+            "year": 2024,
+            "subject": 14,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 92,
+        "fields": {
+            "year": 2020,
+            "subject": 14,
+            "course": "cpa",
+            "month": "November"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 93,
+        "fields": {
+            "year": 2021,
+            "subject": 14,
+            "course": "cpa",
+            "month": "September"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 94,
+        "fields": {
+            "year": 2023,
+            "subject": 15,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 95,
+        "fields": {
+            "year": 2024,
+            "subject": 15,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 96,
+        "fields": {
+            "year": 2025,
+            "subject": 15,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 97,
+        "fields": {
+            "year": 2022,
+            "subject": 15,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 98,
+        "fields": {
+            "year": 2023,
+            "subject": 15,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 99,
+        "fields": {
+            "year": 2024,
+            "subject": 15,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 100,
+        "fields": {
+            "year": 2025,
+            "subject": 15,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 101,
+        "fields": {
+            "year": 2022,
+            "subject": 15,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 102,
+        "fields": {
+            "year": 2023,
+            "subject": 15,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 103,
+        "fields": {
+            "year": 2024,
+            "subject": 15,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 104,
+        "fields": {
+            "year": 2025,
+            "subject": 15,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 105,
+        "fields": {
+            "year": 2023,
+            "subject": 16,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 106,
+        "fields": {
+            "year": 2024,
+            "subject": 16,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 107,
+        "fields": {
+            "year": 2025,
+            "subject": 16,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 108,
+        "fields": {
+            "year": 2023,
+            "subject": 16,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 109,
+        "fields": {
+            "year": 2024,
+            "subject": 16,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 110,
+        "fields": {
+            "year": 2022,
+            "subject": 16,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 111,
+        "fields": {
+            "year": 2023,
+            "subject": 16,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 112,
+        "fields": {
+            "year": 2024,
+            "subject": 16,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 113,
+        "fields": {
+            "year": 2025,
+            "subject": 16,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 114,
+        "fields": {
+            "year": 2022,
+            "subject": 17,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 115,
+        "fields": {
+            "year": 2023,
+            "subject": 17,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 116,
+        "fields": {
+            "year": 2024,
+            "subject": 17,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 117,
+        "fields": {
+            "year": 2025,
+            "subject": 17,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 118,
+        "fields": {
+            "year": 2022,
+            "subject": 17,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 119,
+        "fields": {
+            "year": 2023,
+            "subject": 17,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 120,
+        "fields": {
+            "year": 2024,
+            "subject": 17,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 121,
+        "fields": {
+            "year": 2025,
+            "subject": 17,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 122,
+        "fields": {
+            "year": 2021,
+            "subject": 17,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 123,
+        "fields": {
+            "year": 2021,
+            "subject": 17,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 124,
+        "fields": {
+            "year": 2022,
+            "subject": 17,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 125,
+        "fields": {
+            "year": 2023,
+            "subject": 17,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 126,
+        "fields": {
+            "year": 2024,
+            "subject": 17,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 127,
+        "fields": {
+            "year": 2025,
+            "subject": 17,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 128,
+        "fields": {
+            "year": 2019,
+            "subject": 17,
+            "course": "cpa",
+            "month": "May"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 129,
+        "fields": {
+            "year": 2021,
+            "subject": 17,
+            "course": "cpa",
+            "month": "May"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 130,
+        "fields": {
+            "year": 2020,
+            "subject": 17,
+            "course": "cpa",
+            "month": "November"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 131,
+        "fields": {
+            "year": 2021,
+            "subject": 17,
+            "course": "cpa",
+            "month": "September"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 132,
+        "fields": {
+            "year": 2022,
+            "subject": 18,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 133,
+        "fields": {
+            "year": 2023,
+            "subject": 18,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 134,
+        "fields": {
+            "year": 2024,
+            "subject": 18,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 135,
+        "fields": {
+            "year": 2025,
+            "subject": 18,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 136,
+        "fields": {
+            "year": 2022,
+            "subject": 18,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 137,
+        "fields": {
+            "year": 2023,
+            "subject": 18,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 138,
+        "fields": {
+            "year": 2024,
+            "subject": 18,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 139,
+        "fields": {
+            "year": 2025,
+            "subject": 18,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 140,
+        "fields": {
+            "year": 2021,
+            "subject": 18,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 141,
+        "fields": {
+            "year": 2021,
+            "subject": 18,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 142,
+        "fields": {
+            "year": 2022,
+            "subject": 18,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 143,
+        "fields": {
+            "year": 2023,
+            "subject": 18,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 144,
+        "fields": {
+            "year": 2024,
+            "subject": 18,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 145,
+        "fields": {
+            "year": 2021,
+            "subject": 18,
+            "course": "cpa",
+            "month": "May"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 146,
+        "fields": {
+            "year": 2020,
+            "subject": 18,
+            "course": "cpa",
+            "month": "November"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 147,
+        "fields": {
+            "year": 2021,
+            "subject": 18,
+            "course": "cpa",
+            "month": "September"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 148,
+        "fields": {
+            "year": 2022,
+            "subject": 19,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 149,
+        "fields": {
+            "year": 2023,
+            "subject": 19,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 150,
+        "fields": {
+            "year": 2023,
+            "subject": 19,
+            "course": "cpa",
+            "month": "May"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 151,
+        "fields": {
+            "year": 2024,
+            "subject": 19,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 152,
+        "fields": {
+            "year": 2025,
+            "subject": 19,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 153,
+        "fields": {
+            "year": 2021,
+            "subject": 19,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 154,
+        "fields": {
+            "year": 2023,
+            "subject": 19,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 155,
+        "fields": {
+            "year": 2024,
+            "subject": 19,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 156,
+        "fields": {
+            "year": 2025,
+            "subject": 19,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 157,
+        "fields": {
+            "year": 2021,
+            "subject": 19,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 158,
+        "fields": {
+            "year": 2021,
+            "subject": 19,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 159,
+        "fields": {
+            "year": 2022,
+            "subject": 19,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 160,
+        "fields": {
+            "year": 2023,
+            "subject": 19,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 161,
+        "fields": {
+            "year": 2024,
+            "subject": 19,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 162,
+        "fields": {
+            "year": 2022,
+            "subject": 3,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 163,
+        "fields": {
+            "year": 2023,
+            "subject": 3,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 164,
+        "fields": {
+            "year": 2024,
+            "subject": 3,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 165,
+        "fields": {
+            "year": 2021,
+            "subject": 3,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 166,
+        "fields": {
+            "year": 2022,
+            "subject": 3,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 167,
+        "fields": {
+            "year": 2023,
+            "subject": 3,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 168,
+        "fields": {
+            "year": 2024,
+            "subject": 3,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 169,
+        "fields": {
+            "year": 2021,
+            "subject": 3,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 170,
+        "fields": {
+            "year": 2022,
+            "subject": 3,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 171,
+        "fields": {
+            "year": 2023,
+            "subject": 3,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 172,
+        "fields": {
+            "year": 2024,
+            "subject": 3,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 173,
+        "fields": {
+            "year": 2020,
+            "subject": 3,
+            "course": "cpa",
+            "month": "November"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 174,
+        "fields": {
+            "year": 2022,
+            "subject": 20,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 175,
+        "fields": {
+            "year": 2023,
+            "subject": 20,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 176,
+        "fields": {
+            "year": 2024,
+            "subject": 20,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 177,
+        "fields": {
+            "year": 2025,
+            "subject": 20,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 178,
+        "fields": {
+            "year": 2022,
+            "subject": 20,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 179,
+        "fields": {
+            "year": 2023,
+            "subject": 20,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 180,
+        "fields": {
+            "year": 2024,
+            "subject": 20,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 181,
+        "fields": {
+            "year": 2025,
+            "subject": 20,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 182,
+        "fields": {
+            "year": 2021,
+            "subject": 20,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 183,
+        "fields": {
+            "year": 2021,
+            "subject": 20,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 184,
+        "fields": {
+            "year": 2022,
+            "subject": 20,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 185,
+        "fields": {
+            "year": 2023,
+            "subject": 20,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 186,
+        "fields": {
+            "year": 2024,
+            "subject": 20,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 187,
+        "fields": {
+            "year": 2025,
+            "subject": 20,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 188,
+        "fields": {
+            "year": 2021,
+            "subject": 20,
+            "course": "cpa",
+            "month": "May"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 189,
+        "fields": {
+            "year": 2019,
+            "subject": 20,
+            "course": "cpa",
+            "month": "November"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 190,
+        "fields": {
+            "year": 2020,
+            "subject": 20,
+            "course": "cpa",
+            "month": "November"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 191,
+        "fields": {
+            "year": 2021,
+            "subject": 20,
+            "course": "cpa",
+            "month": "September"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 192,
+        "fields": {
+            "year": 2022,
+            "subject": 1,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 193,
+        "fields": {
+            "year": 2023,
+            "subject": 1,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 194,
+        "fields": {
+            "year": 2024,
+            "subject": 1,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 195,
+        "fields": {
+            "year": 2025,
+            "subject": 1,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 196,
+        "fields": {
+            "year": 2021,
+            "subject": 1,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 197,
+        "fields": {
+            "year": 2022,
+            "subject": 1,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 198,
+        "fields": {
+            "year": 2023,
+            "subject": 1,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 199,
+        "fields": {
+            "year": 2024,
+            "subject": 1,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 200,
+        "fields": {
+            "year": 2021,
+            "subject": 1,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 201,
+        "fields": {
+            "year": 2021,
+            "subject": 1,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 202,
+        "fields": {
+            "year": 2022,
+            "subject": 1,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 203,
+        "fields": {
+            "year": 2023,
+            "subject": 1,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 204,
+        "fields": {
+            "year": 2024,
+            "subject": 1,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 205,
+        "fields": {
+            "year": 2021,
+            "subject": 1,
+            "course": "cpa",
+            "month": "May"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 206,
+        "fields": {
+            "year": 2021,
+            "subject": 1,
+            "course": "cpa",
+            "month": "November"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 207,
+        "fields": {
+            "year": 2022,
+            "subject": 4,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 208,
+        "fields": {
+            "year": 2023,
+            "subject": 4,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 209,
+        "fields": {
+            "year": 2024,
+            "subject": 4,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 210,
+        "fields": {
+            "year": 2025,
+            "subject": 4,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 211,
+        "fields": {
+            "year": 2022,
+            "subject": 4,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 212,
+        "fields": {
+            "year": 2023,
+            "subject": 4,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 213,
+        "fields": {
+            "year": 2024,
+            "subject": 4,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 214,
+        "fields": {
+            "year": 2025,
+            "subject": 4,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 215,
+        "fields": {
+            "year": 2021,
+            "subject": 4,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 216,
+        "fields": {
+            "year": 2021,
+            "subject": 4,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 217,
+        "fields": {
+            "year": 2022,
+            "subject": 4,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 218,
+        "fields": {
+            "year": 2023,
+            "subject": 4,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 219,
+        "fields": {
+            "year": 2024,
+            "subject": 4,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 220,
+        "fields": {
+            "year": 2022,
+            "subject": 5,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 221,
+        "fields": {
+            "year": 2023,
+            "subject": 5,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 222,
+        "fields": {
+            "year": 2024,
+            "subject": 5,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 223,
+        "fields": {
+            "year": 2025,
+            "subject": 5,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 224,
+        "fields": {
+            "year": 2021,
+            "subject": 5,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 225,
+        "fields": {
+            "year": 2023,
+            "subject": 5,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 226,
+        "fields": {
+            "year": 2024,
+            "subject": 5,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 227,
+        "fields": {
+            "year": 2025,
+            "subject": 5,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 228,
+        "fields": {
+            "year": 2021,
+            "subject": 5,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 229,
+        "fields": {
+            "year": 2021,
+            "subject": 5,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 230,
+        "fields": {
+            "year": 2022,
+            "subject": 5,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 231,
+        "fields": {
+            "year": 2023,
+            "subject": 5,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 232,
+        "fields": {
+            "year": 2024,
+            "subject": 5,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 233,
+        "fields": {
+            "year": 2021,
+            "subject": 5,
+            "course": "cpa",
+            "month": "May"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 234,
+        "fields": {
+            "year": 2020,
+            "subject": 5,
+            "course": "cpa",
+            "month": "November"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 235,
+        "fields": {
+            "year": 2022,
+            "subject": 6,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 236,
+        "fields": {
+            "year": 2023,
+            "subject": 6,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 237,
+        "fields": {
+            "year": 2024,
+            "subject": 6,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 238,
+        "fields": {
+            "year": 2025,
+            "subject": 6,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 239,
+        "fields": {
+            "year": 2022,
+            "subject": 6,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 240,
+        "fields": {
+            "year": 2022,
+            "subject": 6,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 241,
+        "fields": {
+            "year": 2023,
+            "subject": 6,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 242,
+        "fields": {
+            "year": 2024,
+            "subject": 6,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 243,
+        "fields": {
+            "year": 2025,
+            "subject": 6,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 244,
+        "fields": {
+            "year": 2021,
+            "subject": 6,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 245,
+        "fields": {
+            "year": 2021,
+            "subject": 6,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 246,
+        "fields": {
+            "year": 2022,
+            "subject": 6,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 247,
+        "fields": {
+            "year": 2023,
+            "subject": 6,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 248,
+        "fields": {
+            "year": 2024,
+            "subject": 6,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 249,
+        "fields": {
+            "year": 2021,
+            "subject": 6,
+            "course": "cpa",
+            "month": "May"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 250,
+        "fields": {
+            "year": 2020,
+            "subject": 6,
+            "course": "cpa",
+            "month": "November"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 251,
+        "fields": {
+            "year": 2021,
+            "subject": 6,
+            "course": "cpa",
+            "month": "September"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 252,
+        "fields": {
+            "year": 2022,
+            "subject": 7,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 253,
+        "fields": {
+            "year": 2023,
+            "subject": 7,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 254,
+        "fields": {
+            "year": 2024,
+            "subject": 7,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 255,
+        "fields": {
+            "year": 2025,
+            "subject": 7,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 256,
+        "fields": {
+            "year": 2022,
+            "subject": 7,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 257,
+        "fields": {
+            "year": 2023,
+            "subject": 7,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 258,
+        "fields": {
+            "year": 2024,
+            "subject": 7,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 259,
+        "fields": {
+            "year": 2025,
+            "subject": 7,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 260,
+        "fields": {
+            "year": 2021,
+            "subject": 7,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 261,
+        "fields": {
+            "year": 2021,
+            "subject": 7,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 262,
+        "fields": {
+            "year": 2022,
+            "subject": 7,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 263,
+        "fields": {
+            "year": 2023,
+            "subject": 7,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 264,
+        "fields": {
+            "year": 2024,
+            "subject": 7,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 265,
+        "fields": {
+            "year": 2021,
+            "subject": 7,
+            "course": "cpa",
+            "month": "May"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 266,
+        "fields": {
+            "year": 2020,
+            "subject": 7,
+            "course": "cpa",
+            "month": "November"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 267,
+        "fields": {
+            "year": 2022,
+            "subject": 8,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 268,
+        "fields": {
+            "year": 2023,
+            "subject": 8,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 269,
+        "fields": {
+            "year": 2024,
+            "subject": 8,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 270,
+        "fields": {
+            "year": 2025,
+            "subject": 8,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 271,
+        "fields": {
+            "year": 2022,
+            "subject": 8,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 272,
+        "fields": {
+            "year": 2023,
+            "subject": 8,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 273,
+        "fields": {
+            "year": 2024,
+            "subject": 8,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 274,
+        "fields": {
+            "year": 2025,
+            "subject": 8,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 275,
+        "fields": {
+            "year": 2021,
+            "subject": 8,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 276,
+        "fields": {
+            "year": 2021,
+            "subject": 8,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 277,
+        "fields": {
+            "year": 2022,
+            "subject": 8,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 278,
+        "fields": {
+            "year": 2023,
+            "subject": 8,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 279,
+        "fields": {
+            "year": 2024,
+            "subject": 8,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 280,
+        "fields": {
+            "year": 2021,
+            "subject": 8,
+            "course": "cpa",
+            "month": "May"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 281,
+        "fields": {
+            "year": 2020,
+            "subject": 8,
+            "course": "cpa",
+            "month": "November"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 282,
+        "fields": {
+            "year": 2021,
+            "subject": 8,
+            "course": "cpa",
+            "month": "September"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 283,
+        "fields": {
+            "year": 2022,
+            "subject": 9,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 284,
+        "fields": {
+            "year": 2023,
+            "subject": 9,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 285,
+        "fields": {
+            "year": 2024,
+            "subject": 9,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 286,
+        "fields": {
+            "year": 2025,
+            "subject": 9,
+            "course": "cpa",
+            "month": "April"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 287,
+        "fields": {
+            "year": 2022,
+            "subject": 9,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 288,
+        "fields": {
+            "year": 2023,
+            "subject": 9,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 289,
+        "fields": {
+            "year": 2024,
+            "subject": 9,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 290,
+        "fields": {
+            "year": 2025,
+            "subject": 9,
+            "course": "cpa",
+            "month": "August"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 291,
+        "fields": {
+            "year": 2021,
+            "subject": 9,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 292,
+        "fields": {
+            "year": 2021,
+            "subject": 9,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 293,
+        "fields": {
+            "year": 2022,
+            "subject": 9,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 294,
+        "fields": {
+            "year": 2023,
+            "subject": 9,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 295,
+        "fields": {
+            "year": 2024,
+            "subject": 9,
+            "course": "cpa",
+            "month": "December"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 296,
+        "fields": {
+            "year": 2021,
+            "subject": 9,
+            "course": "cpa",
+            "month": "May"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 297,
+        "fields": {
+            "year": 2019,
+            "subject": 9,
+            "course": "cpa",
+            "month": "November"
+        }
+    },
+    {
+        "model": "cpa.cpapaper",
+        "pk": 298,
+        "fields": {
+            "year": 2020,
+            "subject": 9,
+            "course": "cpa",
+            "month": "November"
+        }
+    }
+]

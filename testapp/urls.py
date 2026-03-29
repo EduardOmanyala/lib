@@ -24,6 +24,7 @@ urlpatterns = [
     path('tinymce/', include('tinymce.urls')),
     path('api/', include('api.urls')),
     path('', include('questions.urls')),
+    path('', include('cpa.urls')),
 ]
 
 

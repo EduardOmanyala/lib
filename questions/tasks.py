@@ -15,7 +15,7 @@ def send_book_email(self, book_id, email):
     try:
         book = Book.objects.get(id=book_id)
 
-        subject = f"Your Book: {book.title}"
+        subject = f"Your Kenlib Order: {book.title}"
         html_message = render_to_string(
             "questions/booksale.html",
             {"book": book}

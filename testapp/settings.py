@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'crispy_bootstrap4',
     "tinymce",
     "django.contrib.humanize",
+    'cpa',
 ]
 
 MIDDLEWARE = [
