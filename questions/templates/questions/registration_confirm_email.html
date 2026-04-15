@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html>
+<body style="font-family: sans-serif; line-height: 1.5;">
+  <p>Hi{% if first_name %} {{ first_name }}{% endif %},</p>
+  <p>Thanks for registering. Please confirm your email address by clicking the link below:</p>
+  <p><a href="{{ confirm_url }}">Confirm my email</a></p>
+  <p>If you did not create an account, you can ignore this message.</p>
+</body>
+</html>

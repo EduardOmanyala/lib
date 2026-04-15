@@ -19,6 +19,7 @@ PROFILE_PIC_CHOICES = [
 
 class User(BaseUser):
     profile_pic = models.CharField(max_length=100, blank=True, null=True)
+    email_verified = models.BooleanField(default=False)
     objects = BaseUserManager()
 
 

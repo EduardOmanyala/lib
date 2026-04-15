@@ -5,6 +5,11 @@ from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework_simplejwt.views import TokenObtainPairView
 from django.contrib.auth import get_user_model
+from django.utils.encoding import force_str
+from django.utils.http import urlsafe_base64_decode
+
+from custom_user.tokens import email_confirm_token
+from questions.tasks import send_registration_confirmation_email
 from .serializers import UserSerializer, RegisterSerializer, LoginSerializer
 
 User = get_user_model()
@@ -13,6 +18,25 @@ class RegisterView(generics.CreateAPIView):
     queryset = User.objects.all()
     permission_classes = (AllowAny,)
     serializer_class = RegisterSerializer
+
+    def create(self, request, *args, **kwargs):
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        user = serializer.save()
+
+        send_registration_confirmation_email.delay(user.id)
+
+        refresh = RefreshToken.for_user(user)
+
+        return Response(
+            {
+                'user': UserSerializer(user).data,
+                'refresh': str(refresh),
+                'access': str(refresh.access_token),
+                'message': 'Registration successful! Please check your email to confirm your address.',
+            },
+            status=status.HTTP_201_CREATED,
+        )
 
 class LoginView(generics.GenericAPIView):
     permission_classes = (AllowAny,)
@@ -31,6 +55,27 @@ class LoginView(generics.GenericAPIView):
             'access': str(refresh.access_token),
             'message': 'Login successful!'
         })
+
+@api_view(['GET'])
+@permission_classes([AllowAny])
+def confirm_email(request, uidb64, token):
+    try:
+        uid = force_str(urlsafe_base64_decode(uidb64))
+        user = User.objects.get(pk=uid)
+    except (TypeError, ValueError, OverflowError, User.DoesNotExist):
+        user = None
+
+    if user is not None and email_confirm_token.check_token(user, token):
+        if not user.email_verified:
+            user.email_verified = True
+            user.save(update_fields=['email_verified'])
+        return Response({'message': 'Your email has been confirmed.'})
+
+    return Response(
+        {'error': 'Invalid or expired confirmation link.'},
+        status=status.HTTP_400_BAD_REQUEST,
+    )
+
 
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])

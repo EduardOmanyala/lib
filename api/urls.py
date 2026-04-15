@@ -1,8 +1,9 @@
 from django.urls import path
 from rest_framework_simplejwt.views import TokenRefreshView
-from .views import RegisterView, LoginView, user_profile, logout, refresh_token
+from .views import RegisterView, LoginView, user_profile, logout, refresh_token, confirm_email
 
 urlpatterns = [
+    path('confirm-email/<uidb64>/<str:token>/', confirm_email, name='confirm_email'),
     path('register/', RegisterView.as_view(), name='register'),
     path('login/', LoginView.as_view(), name='login'),
     path('profile/', user_profile, name='user_profile'),

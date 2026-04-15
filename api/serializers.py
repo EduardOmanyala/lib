@@ -6,25 +6,33 @@ from django.contrib.auth.password_validation import validate_password
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ('id', 'email', 'first_name', 'last_name', 'profile_pic')
-        read_only_fields = ('id',)
+        fields = ('id', 'email', 'first_name', 'last_name', 'profile_pic', 'email_verified')
+        read_only_fields = ('id', 'email_verified')
 
 class RegisterSerializer(serializers.ModelSerializer):
-    password = serializers.CharField(write_only=True, required=True, validators=[validate_password])
-    password2 = serializers.CharField(write_only=True, required=True)
+    pass1 = serializers.CharField(write_only=True, required=True, validators=[validate_password])
+    pass2 = serializers.CharField(write_only=True, required=True)
 
     class Meta:
         model = User
-        fields = ('email', 'password', 'password2', 'first_name', 'last_name')
+        fields = ('email', 'pass1', 'pass2', 'first_name')
+
+    def validate_first_name(self, value):
+        value = (value or '').strip()
+        if not value:
+            raise serializers.ValidationError('This field may not be blank.')
+        return value
 
     def validate(self, attrs):
-        if attrs['password'] != attrs['password2']:
-            raise serializers.ValidationError({"password": "Password fields didn't match."})
+        if attrs['pass1'] != attrs['pass2']:
+            raise serializers.ValidationError({'pass1': 'Password fields did not match.'})
         return attrs
 
     def create(self, validated_data):
-        validated_data.pop('password2')
-        user = User.objects.create_user(**validated_data)
+        validated_data.pop('pass2')
+        password = validated_data.pop('pass1')
+        email = validated_data.pop('email')
+        user = User.objects.create_user(email, password, **validated_data)
         return user
 
 class LoginSerializer(serializers.Serializer):

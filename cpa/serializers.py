@@ -1,7 +1,5 @@
 from rest_framework import serializers
-from .models import CpaPaper, CpaQuestions
-
-
+from .models import CpaPaper, CpaQuestions, ContactMessage
 
 
 class CpaPaperSerializer(serializers.ModelSerializer):
@@ -28,3 +26,12 @@ class CpaQuestionSerializer(serializers.ModelSerializer):
             'answer',
             'paper'
         ]
+
+
+
+
+
+class ContactMessageSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ContactMessage
+        fields = '__all__'
