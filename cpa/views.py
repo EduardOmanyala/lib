@@ -2,12 +2,12 @@ from django.shortcuts import render
 from rest_framework.decorators import api_view, permission_classes, authentication_classes
 from rest_framework.response import Response
 from rest_framework.permissions import AllowAny, IsAuthenticated
-from rest_framework.generics import ListAPIView
+from rest_framework.generics import ListAPIView, RetrieveAPIView
 from rest_framework import status
-from .serializers import ContactMessageSerializer
+from .serializers import ContactMessageSerializer, PostsSerializer, PostsListSerializer
 
 
-from .models import CpaPaper, CpaQuestions
+from .models import CpaPaper, CpaQuestions, Posts
 from .serializers import CpaPaperSerializer, CpaQuestionSerializer
 
 
@@ -40,3 +40,19 @@ def contact_message_create(request):
         return Response({"message": "Message sent successfully"}, status=status.HTTP_201_CREATED)
     
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+
+
+
+
+class PostsListView(ListAPIView):
+    queryset = Posts.objects.all().order_by('-id')[:30]
+    serializer_class = PostsListSerializer
+    permission_classes = [AllowAny]
+
+class SinglePostView(RetrieveAPIView):
+    queryset = Posts.objects.all()
+    serializer_class = PostsSerializer
+    lookup_field = 'id'
+    permission_classes = [AllowAny] 

@@ -1,8 +1,11 @@
 from django.contrib import admin
-from .models import Question, Kasneb, Course, Subject, MyCourses, MySubjects, Book, Docs, MMFProvider, MMFMonthlyRate
+from .models import Question, Kasneb, Course, Subject, MyCourses, MySubjects, Book, Docs, MMFProvider, MMFMonthlyRate, Purchases, MyNotifications, PaymentLog
 
 admin.site.register(Book)
+admin.site.register(Purchases)
+admin.site.register(MyNotifications)
 admin.site.register(Docs)
+admin.site.register(PaymentLog)
 admin.site.register(MMFProvider)
 admin.site.register(MMFMonthlyRate)
 @admin.register(Question)

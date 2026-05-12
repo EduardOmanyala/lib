@@ -15,13 +15,7 @@ class RegisterSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ('email', 'pass1', 'pass2', 'first_name')
-
-    def validate_first_name(self, value):
-        value = (value or '').strip()
-        if not value:
-            raise serializers.ValidationError('This field may not be blank.')
-        return value
+        fields = ('email', 'pass1', 'pass2')
 
     def validate(self, attrs):
         if attrs['pass1'] != attrs['pass2']:

@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import CpaPaper, CpaQuestions, ContactMessage
+from .models import CpaPaper, CpaQuestions, ContactMessage, Posts, PostContent
 
 
 class CpaPaperSerializer(serializers.ModelSerializer):
@@ -35,3 +35,43 @@ class ContactMessageSerializer(serializers.ModelSerializer):
     class Meta:
         model = ContactMessage
         fields = '__all__'
+
+
+
+
+class PostContentSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = PostContent
+        fields = [
+            'id',
+            'contentImage',
+            'content',
+            'created_at'
+        ]
+
+
+class PostsSerializer(serializers.ModelSerializer):
+    contents = PostContentSerializer(many=True, read_only=True)
+
+    class Meta:
+        model = Posts
+        fields = [
+            'id',
+            'title',
+            'category',
+            'slug',
+            'mainImage',
+            'contents'
+        ]
+
+
+class PostsListSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Posts
+        fields = [
+            'id',
+            'title',
+            'category',
+            'slug',
+            'mainImage',
+        ]

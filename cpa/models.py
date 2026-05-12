@@ -46,5 +46,40 @@ class ContactMessage(models.Model):
 
     def __str__(self):
         return f"{self.name} - {self.email}"
+    
+
+class Posts(models.Model):
+    title = models.CharField(max_length=400)
+    category = models.CharField(max_length=100, null=True, blank=True)
+    mainImage = models.ImageField(upload_to='books/', null=True, blank=True)
+    slug = models.SlugField(max_length=500, unique=False, blank=True)
+
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.title)
+        super().save(*args, **kwargs)
+
+    def __str__(self):
+        return self.title
+
+
+class PostContent(models.Model):
+    post = models.ForeignKey(
+        Posts,
+        related_name='contents',
+        on_delete=models.CASCADE
+    )
+
+    contentImage = models.ImageField(upload_to='books/', null=True, blank=True)
+    content = HTMLField(null=True, blank=True)
+
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['created_at']   # oldest first
+
+    def __str__(self):
+        return f"Content for {self.post.title}"
+
 
 

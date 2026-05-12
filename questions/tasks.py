@@ -37,12 +37,6 @@ def send_book_email(self, book_id, email):
         )
         message.content_subtype = "html"
 
-        docs = Docs.objects.filter(book=book)
-
-        for doc in docs:
-            if doc.file and doc.file.path:
-                message.attach_file(doc.file.path)
-
         message.send(fail_silently=False)
 
     except Book.DoesNotExist:

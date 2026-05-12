@@ -142,6 +142,7 @@ class Book(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     purchase_count = models.IntegerField(default=0)
     info = HTMLField(null=True, blank=True)
+    adinfo = HTMLField(null=True, blank=True)
     summary = models.TextField(blank=True, null=True)
     pdf = models.FileField(upload_to='books/', null=True, blank=True)
     slug = models.SlugField(max_length=500, unique=True, blank=True)
@@ -152,12 +153,17 @@ class Book(models.Model):
     class Meta:
         ordering = ['-created_at']
 
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.title)
+        super().save(*args, **kwargs)
 
-def create_book_slug(sender, instance, **kwargs):
-    if not instance.slug:
-        instance.slug = slugify(instance.title)
 
-pre_save.connect(create_book_slug, sender=Book)
+# def create_book_slug(sender, instance, **kwargs):
+#     if not instance.slug:
+#         instance.slug = slugify(instance.title)
+
+# pre_save.connect(create_book_slug, sender=Book)
 
 
 class Docs(models.Model):
@@ -165,9 +171,26 @@ class Docs(models.Model):
     file = models.FileField(upload_to='books/', null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
+class Purchases(models.Model):
+    book = models.ForeignKey(Book, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+class PaymentLog(models.Model):
+    tx_ref = models.CharField(max_length=255, unique=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    
+class MyNotifications(models.Model):
+    book = models.ForeignKey(Book, on_delete=models.CASCADE, null=True, blank=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    read = models. BooleanField(default=False)
+    text = models.TextField(blank=True, null=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+
 
 class Webhook(models.Model):
-    raw_payload = models.JSONField()           # ← this stores the FULL original JSON
+    raw_payload = models.JSONField()          
 
 
 

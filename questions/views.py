@@ -1,12 +1,14 @@
 from django.shortcuts import render, redirect
-from questions.models import Question, Kasneb, Book, Docs, Webhook, MMFProvider, MMFMonthlyRate
+from questions.models import Question, Kasneb, Book, Docs, Webhook, MMFProvider, MMFMonthlyRate, Purchases, MyNotifications, PaymentLog
 from rest_framework.response import Response
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.views import APIView
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework import generics, status
-from questions.serializers import QuestionSerializer, BookSerializer, MMFProviderSerializer, MMFMonthlyRateSerializer
+from questions.serializers import QuestionSerializer, BookSerializer, MMFProviderSerializer, MMFMonthlyRateSerializer, NotificationSerializer
 from django.contrib import messages
+from custom_user.models import User
+from django.db import transaction
 import random
 from .tasks import send_test_email, send_book_email
 from django.views.decorators.csrf import csrf_exempt
@@ -23,6 +25,18 @@ import re
 from bs4 import BeautifulSoup
 from django.http import HttpResponse
 from django.conf import settings
+
+# views.py
+
+import zipfile
+from django.http import FileResponse, Http404
+from tempfile import NamedTemporaryFile
+import logging
+
+
+
+
+logger = logging.getLogger(__name__)
 
 # Create your views here.
 
@@ -339,134 +353,141 @@ def mailtest1(request):
     send_test_email.delay()   # ← runs asynchronously via Celery
     return redirect('home')
 
+def mailtest2(request):
+    send_mail(
+        'Using SparkPost with Django123',
+        'This is a message from Django using SparkPost!123',
+        'Kenlib@ken-lib.com',
+        ['bestessays001@gmail.com'],
+        fail_silently=False
+    )
+    return redirect('home')
 
 
 
 # @csrf_exempt
 # def pay_success(request):
 #     """
-#     Webhook to handle Flutterwave payment success.
+#     Flutterwave webhook handler.
+#     Does NOT send email — passes data to Celery.
 #     """
-#     if request.method == "POST":
-#         try:
-#             payload = json.loads(request.body)
+#     if request.method != "POST":
+#         return HttpResponse(status=405)
 
-#             # Always return 200 to Flutterwave
-#             response = HttpResponse(status=200)
+#     try:
+#         payload = json.loads(request.body)
 
-#             # ✅ Only continue if payment is successful
-#             if payload.get("status") != "successful":
-#                 return response
+#         # Always return 200 to Flutterwave quickly
+#         response = HttpResponse(status=200)
 
-#             # Extract tx_ref → format book-<id>-<uuid>
-#             tx_ref = payload.get("tx_ref", "")
-#             book_id = None
-#             if tx_ref.startswith("book-"):
-#                 parts = tx_ref.split("-")
-#                 if len(parts) >= 2:
-#                     book_id = parts[1]
+#         data = payload.get("data", {})
+#         event = payload.get("event")
 
-#             # Extract email from meta or customer
-#             email = None
-#             meta = payload.get("meta", {})
-#             if isinstance(meta, dict):
-#                 email = meta.get("email") or payload.get("customer", {}).get("email")
-
-#             # If we have both book_id and email, continue
-#             if book_id and email:
-#                 try:
-#                     book = Book.objects.get(id=book_id)
-
-#                     # Prepare email
-#                     subject = f"Your Book: {book.title}"
-#                     html_message = render_to_string("questions/booksale.html", {"book": book})
-
-#                     message = EmailMessage(
-#                         subject=subject,
-#                         body=html_message,
-#                         from_email="Northstar@the-northstar.com",
-#                         to=[email],
-#                     )
-#                     message.content_subtype = "html"
-
-
-#                     docs = Docs.objects.filter(book=book)
-
-#                     # Attach each doc file (if available)
-#                     for doc in docs:
-#                         if doc.file and doc.file.path:  # ensure file exists
-#                             message.attach_file(doc.file.path)
-
-#                     # Attach book PDF if available
-#                     # if book.pdf:
-#                     #     message.attach_file(book.pdf.path)
-
-#                     message.send(fail_silently=False)
-
-#                 except Book.DoesNotExist:
-#                     pass  # Optionally log error
-
+#         # ✅ Only process completed charges
+#         if event != "charge.completed":
 #             return response
 
-#         except Exception as e:
-#             # Log the error in production
-#             return HttpResponse(status=200)
+#         # ✅ Only successful payments
+#         if data.get("status") != "successful":
+#             return response
 
-#     return HttpResponse(status=405)
+#         # -----------------------------
+#         # Extract book ID from tx_ref
+#         # -----------------------------
+#         tx_ref = data.get("tx_ref", "")
+#         book_id = None
 
+#         if tx_ref.startswith("book-"):
+#             parts = tx_ref.split("-")
+#             if len(parts) >= 2:
+#                 book_id = parts[1]
+
+#         # -----------------------------
+#         # Extract email from customer
+#         # -----------------------------
+#         email = data.get("customer", {}).get("email")
+
+#         # -----------------------------
+#         # Send to Celery (ONLY if valid)
+#         # -----------------------------
+#         if book_id and email:
+#             send_book_email.delay(book_id, email)
+
+#         return response
+
+#     except Exception:
+#         # Never return non-200 to Flutterwave
+#         return HttpResponse(status=200)
+    
 @csrf_exempt
 def pay_success(request):
-    """
-    Flutterwave webhook handler.
-    Does NOT send email — passes data to Celery.
-    """
-    if request.method != "POST":
-        return HttpResponse(status=405)
-
     try:
         payload = json.loads(request.body)
 
-        # Always return 200 to Flutterwave quickly
-        response = HttpResponse(status=200)
+        # Only process relevant events
+        if payload.get("event") != "charge.completed":
+            return HttpResponse(status=200)
 
         data = payload.get("data", {})
-        event = payload.get("event")
 
-        # ✅ Only process completed charges
-        if event != "charge.completed":
-            return response
-
-        # ✅ Only successful payments
+        # Only process successful payments
         if data.get("status") != "successful":
-            return response
+            return HttpResponse(status=200)
 
-        # -----------------------------
-        # Extract book ID from tx_ref
-        # -----------------------------
-        tx_ref = data.get("tx_ref", "")
-        book_id = None
+        tx_ref = data.get("tx_ref")
+        if not tx_ref:
+            logger.warning("Missing tx_ref")
+            return HttpResponse(status=200)
 
-        if tx_ref.startswith("book-"):
-            parts = tx_ref.split("-")
-            if len(parts) >= 2:
-                book_id = parts[1]
+        # جلوگی
+        if PaymentLog.objects.filter(tx_ref=tx_ref).exists():
+            return HttpResponse(status=200)
 
-        # -----------------------------
-        # Extract email from customer
-        # -----------------------------
-        email = data.get("customer", {}).get("email")
+        parts = tx_ref.split("-")
 
-        # -----------------------------
-        # Send to Celery (ONLY if valid)
-        # -----------------------------
-        if book_id and email:
-            send_book_email.delay(book_id, email)
+        if len(parts) < 4 or parts[0] != "book":
+            logger.warning(f"Invalid tx_ref format: {tx_ref}")
+            return HttpResponse(status=200)
 
-        return response
+        book_id = parts[1]
+        user_id = parts[2]
 
-    except Exception:
-        # Never return non-200 to Flutterwave
-        return HttpResponse(status=200)
+        with transaction.atomic():
+            book = Book.objects.get(id=book_id)
+            user = User.objects.get(id=user_id)
+
+            email = user.email
+
+            # Validate amount (don’t trust gateway blindly)
+            if data.get("amount") != book.price:
+                logger.warning("Amount mismatch")
+                return HttpResponse(status=200)
+
+            # Prevent duplicate purchase
+            purchase, created = Purchases.objects.get_or_create(
+                book=book,
+                user=user
+            )
+
+            if created:
+                book.purchase_count += 1
+                book.save()
+
+            #send_book_email.delay(book.id, email)
+
+            # Log processed payment
+            PaymentLog.objects.create(tx_ref=tx_ref)
+
+    except Exception as e:
+        logger.error(f"Webhook error: {str(e)}")
+
+    # ALWAYS return 200
+    return HttpResponse(status=200)
+
+
+
+
+
 
 @csrf_exempt
 @require_POST
@@ -547,73 +568,19 @@ class MMFProviderDetailView(APIView):
     
 
 
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def has_purchased(request, book_id):
+    user = request.user
+
+    exists = Purchases.objects.filter(user=user, book_id=book_id).exists()
+
+    return Response({
+        "purchased": exists
+    }, status=status.HTTP_200_OK)
 
 
-# def generate_fixtures(request):
-#     """
-#     Django view to parse all HTML files in fixtures\data\ and generate
-#     a single JSON fixture file at fixtures\cpa.json
-#     """
 
-#     # data_folder = os.path.join(settings.BASE_DIR, 'fixtures', 'data')
-#     # output_file = os.path.join(settings.BASE_DIR, 'fixtures', 'cpa.json')
-#     data_folder = os.path.join(settings.BASE_DIR, 'questions', 'fixtures', 'collections')
-#     output_file = os.path.join(settings.BASE_DIR, 'questions', 'fixtures', 'cpa.json')
-#     model_name = "questions.Cpa"
-
-#     fixtures = []
-#     pk_counter = 1  # primary key counter
-
-#     # Loop through all HTML files in the data folder
-#     for filename in os.listdir(data_folder):
-#         if filename.endswith('.html'):
-#             html_file_path = os.path.join(data_folder, filename)
-#             with open(html_file_path, 'r', encoding='utf-8') as f:
-#                 html_content = f.read()
-
-#             soup = BeautifulSoup(html_content, 'html.parser')
-
-#             # --- EXTRACT CONSTANTS FROM SCRIPT ---
-#             script_tag = soup.find('script')
-#             script_text = script_tag.string if script_tag else ""
-#             year_match = re.search(r'year\s*=\s*"(\d+)"', script_text)
-#             subject_match = re.search(r'subject\s*=\s*"([^"]+)"', script_text)
-#             course_match = re.search(r'course\s*=\s*"([^"]+)"', script_text)
-#             month_match = re.search(r'month\s*=\s*"([^"]+)"', script_text)
-
-#             year = int(year_match.group(1)) if year_match else 0
-#             subject = subject_match.group(1) if subject_match else ""
-#             course = course_match.group(1) if course_match else ""
-#             month = month_match.group(1) if month_match else ""
-
-#             # --- FIND ALL Q&A PAIRS ---
-#             q_divs = soup.find_all('div', id='qdiv')
-#             a_divs = soup.find_all('div', id='ansdiv')
-
-#             if len(q_divs) != len(a_divs):
-#                 print(f"Warning in {filename}: Number of questions and answers do not match!")
-
-#             for qdiv, ansdiv in zip(q_divs, a_divs):
-#                 fixture = {
-#                     "model": model_name,
-#                     "pk": pk_counter,
-#                     "fields": {
-#                         "year": year,
-#                         "subject": subject,
-#                         "course": course,
-#                         "month": month,
-#                         "question": str(qdiv),
-#                         "answer": str(ansdiv)
-#                     }
-#                 }
-#                 fixtures.append(fixture)
-#                 pk_counter += 1
-
-#     # --- WRITE TO JSON FILE ---
-#     with open(output_file, 'w', encoding='utf-8') as f:
-#         json.dump(fixtures, f, ensure_ascii=False, indent=2)
-
-#     return HttpResponse(f"Fixture generated with {len(fixtures)} questions at {output_file}")
     
 
 def generate_fixtures(request):
@@ -698,3 +665,84 @@ def generate_fixtures(request):
         json.dump(fixtures, f, ensure_ascii=False, indent=2)
 
     return HttpResponse(f"Fixture generated with {len(fixtures)} questions at {output_file}")
+
+
+
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def download_book(request, book_id):
+    user = request.user
+
+    # ✅ Check purchase
+    has_purchased = Purchases.objects.filter(
+        user=user, book_id=book_id
+    ).exists()
+
+    if not has_purchased:
+        raise Http404("You have not purchased this book")
+
+    docs = Docs.objects.filter(book_id=book_id)
+
+    if not docs.exists():
+        raise Http404("No files found")
+
+    # ✅ If only ONE file → return directly
+    if docs.count() == 1:
+        file_path = docs.first().file.path
+        # return FileResponse(open(file_path, 'rb'), as_attachment=True)
+        filename = os.path.basename(file_path)
+        return FileResponse(
+            open(file_path, 'rb'),
+            as_attachment=True,
+            filename=filename
+)
+    # ✅ If MULTIPLE → zip them
+    temp_zip = NamedTemporaryFile(delete=False, suffix=".zip")
+
+    with zipfile.ZipFile(temp_zip.name, 'w') as zipf:
+        for doc in docs:
+            if doc.file:
+                file_path = doc.file.path
+                filename = os.path.basename(file_path)
+                zipf.write(file_path, filename)
+
+    return FileResponse(
+        open(temp_zip.name, 'rb'),
+        as_attachment=True,
+        filename=f"book_{book_id}.zip"
+    )
+
+
+# 🔔 Fetch all unread notifications
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def get_unread_notifications(request):
+    notifications = MyNotifications.objects.filter(
+        user=request.user,
+        read=False
+    ).order_by('-created_at')
+
+    serializer = NotificationSerializer(notifications, many=True)
+    return Response(serializer.data)
+
+# ✅ Mark all unread notifications as read
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def mark_notifications_as_read(request):
+    updated_count = MyNotifications.objects.filter(
+        user=request.user,
+        read=False
+    ).update(read=True)
+
+    return Response({
+        "message": "Notifications marked as read",
+        "updated": updated_count
+    })
+
+# 🔔 Fetch all unread notifications
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def get_all_notifications(request):
+    allnotifications = MyNotifications.objects.filter(user=request.user).order_by('-created_at')[:5]
+    serializer = NotificationSerializer(allnotifications, many=True)
+    return Response(serializer.data)

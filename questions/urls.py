@@ -16,6 +16,14 @@ urlpatterns = [
 
 
     path("books/<int:id>/", questions_views.BookDetailView.as_view(), name="book-detail"),
+    path('purchases/check/<int:book_id>/', questions_views.has_purchased, name='has-purchased'),
+    path('books/download/<int:book_id>/', questions_views.download_book, name='download-book'),
+
+    path('notifications/unread/', questions_views.get_unread_notifications, name='unread-notifications'),
+    path('notifications/mark-read/', questions_views.mark_notifications_as_read, name='mark-notifications-read'),
+    path('notifications/get-all/', questions_views.get_all_notifications, name='get-all-notifications'),
+
+
     path("webhook/flutterwave/", questions_views.pay_success, name="book-pay-success"),
     # path('webhook/flutterwave/', questions_views.flutterwave_webhook, name='flutterwave-webhook'),
     path('webtest/', questions_views.webhook_test, name='flutterwave-webtest'),
@@ -35,7 +43,7 @@ urlpatterns = [
     path('api/onboarding-status/', questions_views.check_onboarding_status, name='check_onboarding_status'),
 
 
-    path('mailtest', questions_views.mailtest1, name='mailtest'),
+    path('mailtest', questions_views.mailtest2, name='mailtest'),
 ]
 
 

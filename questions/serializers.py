@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Question, Kasneb, Course, Subject, MyCourses, MySubjects, Book, MMFProvider, MMFMonthlyRate
+from .models import Question, Kasneb, Course, Subject, MyCourses, MySubjects, Book, Docs, MMFProvider, MMFMonthlyRate, MyNotifications
 
 
 class QuestionSerializer(serializers.ModelSerializer):
@@ -62,6 +62,11 @@ class BookSerializer(serializers.ModelSerializer):
         model = Book
         fields = ['id', 'title', 'author', 'pdf_file', 'created_at', 'availability', 'purchase_count', 'slug', 'price', 'info', 'summary']
 
+class DocsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Docs
+        fields = ['id', 'file', 'created_at']
+
 
 class MMFProviderSerializer(serializers.ModelSerializer):
     class Meta:
@@ -79,3 +84,12 @@ class MMFMonthlyRateSerializer(serializers.ModelSerializer):
 class MMFRateSummarySerializer(serializers.Serializer):
     latest_rate = serializers.DecimalField(max_digits=6, decimal_places=2)
     percentage_change = serializers.DecimalField(max_digits=6, decimal_places=2, allow_null=True)
+
+
+class NotificationSerializer(serializers.ModelSerializer):
+    book_id = serializers.IntegerField(source='book.id', read_only=True)
+    book_slug = serializers.CharField(source='book.slug', read_only=True)
+
+    class Meta:
+        model = MyNotifications
+        fields = ['id', 'book', 'book_id', 'book_slug', 'text', 'read', 'created_at']
