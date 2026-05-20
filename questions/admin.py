@@ -1,5 +1,9 @@
 from django.contrib import admin
-from .models import Question, Kasneb, Course, Subject, MyCourses, MySubjects, Book, Docs, MMFProvider, MMFMonthlyRate, Purchases, MyNotifications, PaymentLog
+from .models import (Question, Kasneb, Course, Subject, 
+                     MyCourses, MySubjects, Book, Docs, 
+                     MMFProvider, MMFMonthlyRate, Purchases, 
+                     MyNotifications, PaymentLog,
+                     SFProvider, SFMonthlyRate)
 
 admin.site.register(Book)
 admin.site.register(Purchases)
@@ -8,6 +12,8 @@ admin.site.register(Docs)
 admin.site.register(PaymentLog)
 admin.site.register(MMFProvider)
 admin.site.register(MMFMonthlyRate)
+admin.site.register(SFProvider)
+admin.site.register(SFMonthlyRate)
 @admin.register(Question)
 class QuestionAdmin(admin.ModelAdmin):
     list_display = ['subject', 'year', 'question_num', 'type', 'paper_type']

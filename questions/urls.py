@@ -28,6 +28,7 @@ urlpatterns = [
     # path('webhook/flutterwave/', questions_views.flutterwave_webhook, name='flutterwave-webhook'),
     path('webtest/', questions_views.webhook_test, name='flutterwave-webtest'),
     path("mmf/providers/<str:code>/", questions_views.MMFProviderDetailView.as_view(), name="mmf-provider-detail"),
+    path("sf/providers/<str:code>/", questions_views.SFProviderDetailView.as_view(), name="sf-provider-detail"),
     
     # API endpoints for courses and subjects
     path('api/courses/', questions_views.course_list, name='course_list'),

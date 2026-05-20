@@ -1,0 +1,48 @@
+
+[
+    {
+        "model": "questions.SFProvider",
+        "pk": 1,
+        "fields": {
+            "name": "Mansa X Special Fund",
+            "code": "MNX",
+            "is_active": true
+        }
+    },
+    {
+        "model": "questions.SFProvider",
+        "pk": 2,
+        "fields": {
+            "name": "Kuza Asset Management Special Fund",
+            "code": "KUZ",
+            "is_active": true
+        }
+    },
+    {
+        "model": "questions.SFProvider",
+        "pk": 3,
+        "fields": {
+            "name": "Oak Asset Management Special Fund",
+            "code": "OAK",
+            "is_active": true
+        }
+    },
+    {
+        "model": "questions.SFProvider",
+        "pk": 4,
+        "fields": {
+            "name": "Arvocap Almasi Fund",
+            "code": "ARVC",
+            "is_active": true
+        }
+    },
+    {
+        "model": "questions.SFProvider",
+        "pk": 5,
+        "fields": {
+            "name": "Etica Special Wealth Fund",
+            "code": "ETICA",
+            "is_active": true
+        }
+    }
+]

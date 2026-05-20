@@ -1,11 +1,22 @@
 from django.shortcuts import render, redirect
-from questions.models import Question, Kasneb, Book, Docs, Webhook, MMFProvider, MMFMonthlyRate, Purchases, MyNotifications, PaymentLog
+from questions.models import (Question, Kasneb, Book, Docs, Webhook, 
+                              MMFProvider, MMFMonthlyRate, 
+                              Purchases, MyNotifications, 
+                              PaymentLog,
+                              SFProvider,
+                              SFMonthlyRate,
+                             )
 from rest_framework.response import Response
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.views import APIView
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework import generics, status
-from questions.serializers import QuestionSerializer, BookSerializer, MMFProviderSerializer, MMFMonthlyRateSerializer, NotificationSerializer
+from questions.serializers import (QuestionSerializer, BookSerializer, 
+                                   MMFProviderSerializer, MMFMonthlyRateSerializer, 
+                                   NotificationSerializer,
+                                   SFMonthlyRateSerializer,
+                                   SFProviderSerializer,
+                                   SFRateSummarySerializer)
 from django.contrib import messages
 from custom_user.models import User
 from django.db import transaction
@@ -364,60 +375,6 @@ def mailtest2(request):
     return redirect('home')
 
 
-
-# @csrf_exempt
-# def pay_success(request):
-#     """
-#     Flutterwave webhook handler.
-#     Does NOT send email — passes data to Celery.
-#     """
-#     if request.method != "POST":
-#         return HttpResponse(status=405)
-
-#     try:
-#         payload = json.loads(request.body)
-
-#         # Always return 200 to Flutterwave quickly
-#         response = HttpResponse(status=200)
-
-#         data = payload.get("data", {})
-#         event = payload.get("event")
-
-#         # ✅ Only process completed charges
-#         if event != "charge.completed":
-#             return response
-
-#         # ✅ Only successful payments
-#         if data.get("status") != "successful":
-#             return response
-
-#         # -----------------------------
-#         # Extract book ID from tx_ref
-#         # -----------------------------
-#         tx_ref = data.get("tx_ref", "")
-#         book_id = None
-
-#         if tx_ref.startswith("book-"):
-#             parts = tx_ref.split("-")
-#             if len(parts) >= 2:
-#                 book_id = parts[1]
-
-#         # -----------------------------
-#         # Extract email from customer
-#         # -----------------------------
-#         email = data.get("customer", {}).get("email")
-
-#         # -----------------------------
-#         # Send to Celery (ONLY if valid)
-#         # -----------------------------
-#         if book_id and email:
-#             send_book_email.delay(book_id, email)
-
-#         return response
-
-#     except Exception:
-#         # Never return non-200 to Flutterwave
-#         return HttpResponse(status=200)
     
 @csrf_exempt
 def pay_success(request):
@@ -565,7 +522,47 @@ class MMFProviderDetailView(APIView):
                 latest.percentage_change if latest else None
             ),
         })
+
+
+
+ 
+class SFProviderDetailView(APIView):
+    permission_classes = [AllowAny]
+ 
     
+    def get(self, request, code):
+        try:
+            provider = SFProvider.objects.get(code=code, is_active=True)
+        except SFProvider.DoesNotExist:
+            return Response(
+                {"detail": "Provider not found"},
+                status=status.HTTP_404_NOT_FOUND
+            )
+
+        # Last 12 months (latest first, then reversed for chart)
+        monthly_qs = (
+            SFMonthlyRate.objects
+            .filter(provider=provider)
+            .order_by("-created_at")[:12]
+        )
+
+        sfmonthly_rates = list(monthly_qs)[::-1]
+
+        latest = monthly_qs.first()
+
+        return Response({
+            "provider": SFProviderSerializer(provider).data,
+            "sfmonthly_rates": SFMonthlyRateSerializer(
+                sfmonthly_rates, many=True
+            ).data,
+            "latest_rate": latest.rate if latest else None,
+            "percentage_change": (
+                latest.percentage_change if latest else None
+            ),
+        })
+       
+
+
 
 
 @api_view(['GET'])

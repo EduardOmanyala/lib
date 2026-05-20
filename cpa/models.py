@@ -53,6 +53,7 @@ class Posts(models.Model):
     category = models.CharField(max_length=100, null=True, blank=True)
     mainImage = models.ImageField(upload_to='books/', null=True, blank=True)
     slug = models.SlugField(max_length=500, unique=False, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True, null=True, blank=True)
 
     def save(self, *args, **kwargs):
         if not self.slug:

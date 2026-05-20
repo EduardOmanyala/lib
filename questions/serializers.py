@@ -1,5 +1,8 @@
 from rest_framework import serializers
-from .models import Question, Kasneb, Course, Subject, MyCourses, MySubjects, Book, Docs, MMFProvider, MMFMonthlyRate, MyNotifications
+from .models import (Question, Kasneb, Course, 
+Subject, MyCourses, MySubjects, Book, 
+Docs, MMFProvider, MMFMonthlyRate, 
+MyNotifications, SFMonthlyRate, SFProvider)
 
 
 class QuestionSerializer(serializers.ModelSerializer):
@@ -60,7 +63,7 @@ class CourseWithSubjectsSerializer(serializers.ModelSerializer):
 class BookSerializer(serializers.ModelSerializer):
     class Meta:
         model = Book
-        fields = ['id', 'title', 'author', 'pdf_file', 'created_at', 'availability', 'purchase_count', 'slug', 'price', 'info', 'summary']
+        fields = ['id', 'title', 'author', 'pdf_file', 'created_at', 'availability', 'purchase_count', 'slug', 'price', 'info', 'adinfo', 'summary']
 
 class DocsSerializer(serializers.ModelSerializer):
     class Meta:
@@ -93,3 +96,23 @@ class NotificationSerializer(serializers.ModelSerializer):
     class Meta:
         model = MyNotifications
         fields = ['id', 'book', 'book_id', 'book_slug', 'text', 'read', 'created_at']
+
+
+
+
+class SFProviderSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = SFProvider
+        fields = ["name", "code"]
+
+class SFMonthlyRateSerializer(serializers.ModelSerializer):
+    month = serializers.CharField()
+    rate = serializers.DecimalField(max_digits=6, decimal_places=2)
+
+    class Meta:
+        model = SFMonthlyRate
+        fields = ["month", "rate"]
+
+class SFRateSummarySerializer(serializers.Serializer):
+    latest_rate = serializers.DecimalField(max_digits=6, decimal_places=2)
+    percentage_change = serializers.DecimalField(max_digits=6, decimal_places=2, allow_null=True)
